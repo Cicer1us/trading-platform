@@ -1,0 +1,101 @@
+.wrapper {
+    width: 36rem;
+}
+
+.body {
+    border-radius: .4rem;
+    position: relative;
+    padding: 1.2rem 0.5rem 1.2rem 2.4rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .3rem;
+    height: 100%;
+    border-radius: .4rem 0 0 .4rem;
+    z-index: 1;
+}
+
+
+/* SUCCESS */
+.body.success {
+    background-color: var(--darkGreen);
+}
+
+.body.success::after {
+    background-color: var(--green);
+}
+
+.body.success .notifyLink {
+    color: var(--green);
+    border-bottom: 2px solid var(--green);
+}
+
+
+/* ERROR */
+.body.error {
+    background-color: var(--darkRed);
+}
+
+.body.error::after {
+    background-color: var(--red);
+}
+
+.body.error .notifyLink {
+    color: var(--red);
+    border-bottom: 2px solid var(--red);
+}
+
+/* WARNING */
+.body.warning {
+    background-color: var(--darkYellow);
+}
+
+.body.warning::after {
+    background-color: var(--yellow);
+}
+
+.body.warning .notifyLink {
+    color: var(--yellow);
+    border-bottom: 2px solid var(--yellow);
+}
+
+/* INFO */
+.body.info {
+    background-color: var(--darkViolet);
+}
+
+.body.info::after {
+    background-color: var(--violet);
+}
+
+.body.info .notifyLink {
+    color: var(--violet);
+    border-bottom: 2px solid var(--violet);
+}
+
+.notifyMessage {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    flex: 1;
+}
+
+.notifyLink {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    margin-left: 2rem;
+}
+
+.notify {
+    display: flex;
+    align-items: center;
+}
+

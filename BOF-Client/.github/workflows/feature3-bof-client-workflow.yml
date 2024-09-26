@@ -1,0 +1,77 @@
+name: Build bof-client-feature-branch-3-docker
+
+on:
+  # left feature 3 with the old build approach just in case something goes wrong with the manual deployment approach
+  # TODO: actualize this workflow file with others once we will be sure that we don't need the building approach that is implemented here
+  push:
+    branches: [feat/multiple-wallets]
+  workflow_dispatch:
+
+env:
+  ACR_LOGIN_SRV: ${{ secrets.ACR_NAME }}.azurecr.io
+  IMAGE_NAME_LATEST: ${{ secrets.ACR_NAME }}.azurecr.io/feature3_bof_client_test_deploy:latest
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: Development
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+
+      - name: Create env file
+        run: |
+          touch .env
+          echo COINMARKET_API_KEY=${{ secrets.COINMARKET_API_KEY }} >> .env
+          echo GOOGLE_PRIVATE_KEY=${{ secrets.GOOGLE_PRIVATE_KEY }} >> .env
+          echo GOOGLE_SERVICE_ACCOUNT_EMAIL=${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }} >> .env
+          echo GOOGLE_SHEET_DOCUMENT_ID=${{ secrets.GOOGLE_SHEET_DOCUMENT_ID }} >> .env
+          echo GOOGLE_SHEET_DOCUMENT_ID_PHONES=${{ secrets.GOOGLE_SHEET_DOCUMENT_ID_PHONES }} >> .env
+          echo NEXT_PUBLIC_GA_ID=${{ secrets.NEXT_PUBLIC_GA_ID }} >> .env
+          echo NEXT_PUBLIC_NEXT_ENV=${{ secrets.NEXT_PUBLIC_NEXT_ENV }} >> .env
+          echo NEXT_PUBLIC_SERVER_URL=${{ secrets.NEXT_PUBLIC_SERVER_URL }} >> .env
+          echo NEXT_PUBLIC_CONTENTFUL_API_SPACE=${{ secrets.NEXT_PUBLIC_CONTENTFUL_API_SPACE }} >> .env
+          echo NEXT_PUBLIC_CONTENTFUL_API_ACCESS_TOKEN=${{ secrets.NEXT_PUBLIC_CONTENTFUL_API_ACCESS_TOKEN }} >> .env
+          echo NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=${{ secrets.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID }} >> .env
+          echo NEXT_PUBLIC_POLYGON_RPC_URL=${{ secrets.NEXT_PUBLIC_POLYGON_RPC_URL }} >> .env
+          echo NEXT_PUBLIC_DYDX_AFFILIATE_LINK=${{ secrets.NEXT_PUBLIC_DYDX_AFFILIATE_LINK }} >> .env
+          echo NEXT_PUBLIC_ZENDESK_API_KEY=${{ secrets.NEXT_PUBLIC_ZENDESK_API_KEY }} >> .env
+          echo NEXT_PUBLIC_COINGECKO_API_KEY=${{ secrets.NEXT_PUBLIC_COINGECKO_API_KEY }} >> .env
+          echo CRYPTO_PANIC_TOKEN=${{ secrets.CRYPTO_PANIC_TOKEN }} >> .env
+          echo NEXT_PUBLIC_INFURA_KEY=${{ secrets.NEXT_PUBLIC_INFURA_KEY }} >> .env
+          echo NEXT_PUBLIC_0X_API_KEY=${{ secrets.NEXT_PUBLIC_0X_API_KEY }} >> .env
+
+      - name: npm install, build, and test
+        run: |
+          npm ci
+          npm run build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: env_file
+          path: .env
+  build_and_push_to_acr:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/feat/multiple-wallets'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: env_file
+
+      - uses: azure/docker-login@v1
+        with:
+          login-server: ${{ env.ACR_LOGIN_SRV }}
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+
+      - run: docker build --build-arg NPM_TOKEN=${{ env.NPM_TOKEN }} . -t ${{ env.IMAGE_NAME_LATEST }}
+      - run: docker push ${{ env.IMAGE_NAME_LATEST }}

@@ -1,0 +1,20 @@
+.wrapperModal {
+  font-size: 16px;
+}
+
+.titleModal {
+  font-size: 24px;
+  margin: 0;
+  margin-right: 8px;
+}
+
+.descriptionModal {
+  margin: 24px 0 48px;
+  color: var(--secondaryFont);
+}
+
+@media (max-width: 767px) {
+  .titleWrapper {
+    margin-bottom: 8px;
+  }
+}

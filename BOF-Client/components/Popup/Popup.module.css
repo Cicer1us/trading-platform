@@ -1,0 +1,10 @@
+.tooltip.tooltipContainer {
+   --tooltipBackground: var(--secondaryBackground);
+   --tooltipBorder: var(--green);
+   color: var(--font);
+   background-color: var(--secondaryBackground);
+   font-size: 14px;
+   padding: 8px;
+   border-radius: 8px;
+   width: 100%;
+}

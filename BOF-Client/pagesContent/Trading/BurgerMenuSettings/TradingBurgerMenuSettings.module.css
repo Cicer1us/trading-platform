@@ -1,0 +1,85 @@
+.container {
+  --greenColor: #38d9c0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: calc(100vh - var(--headerHeight));
+  width: 100vw;
+  /*background: linear-gradient(233.95deg, #2a2844 -4.24%, #0f1015 108.46%);*/
+  background-color: var(--defaultButton);
+}
+
+.optionWrapper {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  flex-direction: row;
+  color: var(--font);
+  padding: 16px;
+  border-bottom: 1px solid #414166;
+  cursor: pointer;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.optionWrapper.active > svg {
+  transform: rotate(180deg);
+}
+
+.optionWrapper > svg {
+  transition: 0.3s ease-in-out;
+}
+
+.optionDropdown {
+  height: 0;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.optionDropdown > div {
+  display: flex;
+  column-gap: 8px;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+
+.optionDropdown.active {
+  display: flex;
+  flex-direction: column;
+  padding: 24px; 
+  row-gap: 16px;
+  opacity: 1;
+  height: 100%;
+}
+
+.login {
+    font-size: 16px;
+    margin: 16px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+.socialsWrapper {
+  height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: width ease-in 0.3s;
+  padding: 16px;
+}
+
+.socialButtonsWrapper {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+.grow {
+  flex-grow: 1;
+}

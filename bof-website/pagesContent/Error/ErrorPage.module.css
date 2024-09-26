@@ -1,0 +1,121 @@
+.bg {
+  background-color: #171722;
+  background-image: radial-gradient(circle at 50% 6%, rgba(56, 217, 192, 0.3) 50px, transparent 600px),
+    radial-gradient(circle at 95% 40%, rgba(255, 102, 102, 0.3) 50px, transparent 600px);
+}
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px;
+  flex-direction: column;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.logo {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  cursor: pointer;
+}
+.title {
+  font-size: 80px;
+}
+.redirect {
+  display: flex;
+  font-size: 30px;
+  position: relative;
+}
+.dotWrapper {
+  position: absolute;
+  right: -32px;
+  bottom: 5px;
+}
+.dotTyping {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #38d9c0;
+  color: #38d9c0;
+  box-shadow:
+    9984px 0 0 0 #38d9c0,
+    9999px 0 0 0 #38d9c0,
+    10014px 0 0 0 #38d9c0;
+  animation: dotTyping 1.5s infinite linear;
+}
+
+@keyframes dotTyping {
+  0% {
+    box-shadow:
+      9984px 0 0 0 #38d9c0,
+      9999px 0 0 0 #38d9c0,
+      10014px 0 0 0 #38d9c0;
+  }
+  16.667% {
+    box-shadow:
+      9984px -10px 0 0 #38d9c0,
+      9999px 0 0 0 #38d9c0,
+      10014px 0 0 0 #38d9c0;
+  }
+  33.333% {
+    box-shadow:
+      9984px 0 0 0 #38d9c0,
+      9999px 0 0 0 #38d9c0,
+      10014px 0 0 0 #38d9c0;
+  }
+  50% {
+    box-shadow:
+      9984px 0 0 0 #38d9c0,
+      9999px -10px 0 0 #38d9c0,
+      10014px 0 0 0 #38d9c0;
+  }
+  66.667% {
+    box-shadow:
+      9984px 0 0 0 #38d9c0,
+      9999px 0 0 0 #38d9c0,
+      10014px 0 0 0 #38d9c0;
+  }
+  83.333% {
+    box-shadow:
+      9984px 0 0 0 #38d9c0,
+      9999px 0 0 0 #38d9c0,
+      10014px -10px 0 0 #38d9c0;
+  }
+  100% {
+    box-shadow:
+      9984px 0 0 0 #38d9c0,
+      9999px 0 0 0 #38d9c0,
+      10014px 0 0 0 #38d9c0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    padding: 20px;
+    justify-content: space-evenly;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .redirect {
+    font-size: 20px;
+    width: 250px;
+  }
+  .dotWrapper {
+    position: absolute;
+    right: 23px;
+    bottom: 5px;
+  }
+  .dotTyping {
+    height: 8px;
+    width: 8px;
+  }
+}

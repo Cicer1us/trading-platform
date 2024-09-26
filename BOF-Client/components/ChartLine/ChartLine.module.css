@@ -1,0 +1,20 @@
+.customTooltip {
+  background-color: var(--secondaryFont);
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+}
+
+.tooltipDate {
+  font-size: 14px;
+  line-height: 32px;
+  color: var(--secondaryBackground);
+}
+
+.message {
+  height: 100%;
+  display: grid;
+  font-size: 20px;
+  color: #A1AEC2;
+  place-content: center;
+}

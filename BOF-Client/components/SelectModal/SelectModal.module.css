@@ -1,0 +1,219 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   max-height: 100%;
+}
+
+.modal {
+   padding: 0;
+   width: 660px;
+}
+
+.search {
+   padding: 54px 54px 0 54px;
+}
+
+.header {
+   margin-bottom: 24px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.titleContainer {
+   display: flex;
+   align-items: center;
+   margin-right: 20px;
+   flex-shrink: 0;
+}
+
+.listContainer {
+   height: 40vh;
+   max-height: 400px;
+   padding-right: 8px;
+   width: 100%;
+}
+
+.title {
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 32px;
+   margin: 0;
+}
+
+.searchWrapper {
+   margin-bottom: 20px;
+   flex-shrink: 0;
+}
+
+.option {
+   position: relative;
+   display: flex;
+   align-items: center;
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 24px;
+   cursor: pointer;
+   width: 100%;
+   padding: 8px 0;
+   transition: background-color 0.3s;
+   column-gap: 8px;
+}
+
+.option:last-of-type {
+   margin: 0;
+}
+
+.option:hover {
+   background-color: var(--darkGray);
+}
+
+.coinName {
+   font-weight: 400;
+}
+
+.radioButtonsWrapper {
+   display: grid;
+   grid-auto-flow: column;
+   align-items: center;
+   justify-content: flex-end;
+}
+
+.radioButton {
+   display: flex;
+   align-items: center;
+   column-gap: 8px;
+   cursor: default;
+   color: var(--secondaryFont);
+   cursor: pointer;
+}
+
+.radioButton:first-child {
+   margin-right: 20px;
+}
+
+.leverageSideTitle {
+   font-size: 16px;
+}
+
+.radioCircle {
+   border-radius: 11px;
+   width: 20px;
+   height: 20px;
+   display: block;
+   background: var(--secondaryBackground);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.checkedSell {
+   border: 3px solid var(--red);
+}
+
+.checkedBuy {
+   border: 3px solid var(--green);
+}
+
+.innerCircleBuy,
+.innerCircleSell {
+   border-radius: 11px;
+   width: 10px;
+   height: 10px;
+}
+
+.innerCircleBuy {
+   background: var(--green);
+}
+
+.innerCircleSell {
+   background: var(--red);
+}
+
+.checked {
+   text-shadow: 0 0 0.65px var(--font), 0 0 0.65px var(--font);
+}
+
+.loader {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+@media (max-width: 767px) {
+   .header {
+      display: block;
+   }
+
+   .radioButtonsWrapper {
+      justify-content: center;
+      padding: 20px 0;
+   }
+}
+
+.content {
+   display: flex;
+   justify-content: space-between;
+   flex: 1;
+}
+
+.balance {
+   font-weight: 400;
+   color: var(--secondaryFont);
+   display: flex;
+   align-items: center;
+}
+
+.chainsWrapper {
+   display: flex;
+   flex-flow: column;
+   gap: 8px;
+   padding-right: 24px
+}
+
+.chainOption {
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   padding: 9px 16px;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 16px;
+   color: var(--mainFontNew);
+   background-color: var(--defaultButton);
+   transition: 0.1s ease-in-out;
+   position: relative;
+   border-radius: 6px;
+   border: 2px solid transparent;
+}
+
+.chainOption:hover,
+.selected {
+   border-color: var(--green);
+}
+
+.disabledChain {
+   background-color: var(--secondaryBackground);
+   pointer-events: none;
+   display: none;
+}
+
+.chainTitle:not(:first-child) {
+   margin-left: 8px;
+}
+
+.tokens {
+   display: flex;
+   padding-left: 54px;
+   padding-right: 54px;
+   margin-top: 18px;
+}
+
+.marketsMsg {
+   font-weight: 400;
+   font-size: 16px;
+}
+
+.marketLink {
+   color: var(--green);
+   text-decoration: underline;
+}

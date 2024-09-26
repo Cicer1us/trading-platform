@@ -1,0 +1,110 @@
+.greenBorder {
+  --borderColor: var(--green);
+}
+.transparentBorder {
+  --borderColor: transparent;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown:hover .title {
+  border: 2px solid var(--borderColor);
+}
+
+.title {
+  height: 40px;
+  font-weight: bold;
+  background-color: var(--defaultButton);
+  border-radius: 8px;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+  border: 2px solid transparent;
+}
+
+.titleContent {
+  flex: 1;
+}
+
+.title > .arrow {
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu {
+  list-style: none;
+  background-color: var(--defaultButton);
+  padding: 16px 0;
+  display: flex;
+  flex-flow: column;
+  row-gap: 8px;
+  position: absolute;
+  display: none;
+  border-radius: 8px;
+  border: 2px solid var(--borderColor);
+}
+
+.menu ul {
+  left: 100%;
+  top: -16px;
+  /* top: -2px; */
+}
+
+.menu li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.menu li > *:not(.menu) {
+  padding: 2px 24px;
+}
+
+.menu li:hover:not(.category) {
+  background: var(--greenHover);
+  cursor: pointer;
+}
+
+.dropdown > .menu {
+  top: 48px;
+}
+
+.dropdown.open > .title {
+  border: 2px solid var(--borderColor);
+}
+
+.dropdown.open .title .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown.open > .menu {
+  display: flex;
+}
+
+.menu:hover,
+.emptyPadding:hover ~ .menu,
+.menu li:hover > ul {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.categoryTitle {
+  color: var(--green);
+  font-weight: bold;
+}

@@ -1,0 +1,96 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Merchant {
+  id                 String        @id @default(auto()) @map("_id") @db.ObjectId
+  email              String        @unique
+  emailIsVerified    Boolean       @default(false)
+  password           String
+  apiKey             String        @unique @default(uuid())
+  subscriptionSecret String        @unique @default(uuid())
+  subscriptionUrls   String[]
+  createdAt          DateTime      @default(now())
+  updatedAt          DateTime      @updatedAt
+  payments           Payment[]
+  verification       Verification?
+  // TODO: consider option to use different wallet address for different chains
+  // for now we will use the same address for all chains
+  walletAddress      String?
+  otpBase32Secret    String?
+}
+
+model Payment {
+  id          String        @id @default(auto()) @map("_id") @db.ObjectId
+  merchant    Merchant      @relation(fields: [merchantId], references: [id])
+  merchantId  String        @db.ObjectId
+  price       OrderPrice
+  metadata    OrderMetadata
+  transaction Transaction?
+  status      PaymentStatus @default(PENDING)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+enum PaymentStatus {
+  PENDING
+  ACCEPTED
+  COMPLETED
+  CANCELLED
+}
+
+type OrderPrice {
+  fiatPrice    Float
+  fiatCurrency String
+}
+
+type OrderMetadata {
+  description String
+  redirectUrl String?
+  cancelUrl   String?
+  orderId     String
+  source      String
+}
+
+model Transaction {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  chainId           Int
+  txHash            String
+  merchant          String
+  payInToken        String
+  payOutToken       String
+  payInAmount       String
+  payOutAmount      String
+  payOutHumanAmount Float
+  initiator         String
+  txGasUsed         String
+  txGasPrice        String
+  blockHash         String
+  blockNumber       String
+  timestamp         String
+  payment           Payment @relation(fields: [paymentId], references: [id])
+  paymentId         String  @unique @db.ObjectId
+}
+
+model Verification {
+  id         String             @id @default(auto()) @map("_id") @db.ObjectId
+  merchant   Merchant           @relation(fields: [merchantId], references: [id])
+  merchantId String             @unique @db.ObjectId
+  token      String             @unique @default(uuid())
+  action     VerificationAction
+  expiresAt  DateTime
+  updatedAt  DateTime           @updatedAt
+}
+
+enum VerificationAction {
+  EMAIL_VERIFICATION
+  RESET_PASSWORD
+}

@@ -1,0 +1,83 @@
+.statisticsWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  flex-direction: row;
+  column-gap: 24px;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.statisticsWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.tokenTickerContainer {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  column-gap: 8px;
+  row-gap: 12px;
+  flex: 0 0 auto;
+}
+
+.tokenImage {
+  grid-row: 1 / 3;
+  height: 48px;
+  width: 48px;
+}
+
+.tokenName {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  margin-left: 15px;
+}
+
+.tokenTicker {
+  color: #c5c9c9;
+  margin-left: 15px;
+}
+
+.price {
+  justify-self: end;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.percentage {
+  justify-self: end;
+  font-weight: 700;
+}
+
+.btnWrap {
+  margin-top: 24px;
+}
+
+.buy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 262px;
+  height: 56px;
+  background: #2b363b;
+  border-radius: 8px;
+}
+
+.buy:hover {
+  opacity: 70%;
+}
+
+.priceUp span {
+  color: var(--green);
+}
+
+.priceDown span {
+  color: var(--red);
+}

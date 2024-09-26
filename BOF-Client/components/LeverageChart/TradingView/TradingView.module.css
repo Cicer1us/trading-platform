@@ -1,0 +1,12 @@
+.loader {
+   display: grid;
+   place-content: center;
+   row-gap: 40px;
+   justify-items: center;
+}
+
+.loader>p {
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 30px;
+}

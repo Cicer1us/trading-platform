@@ -1,0 +1,56 @@
+.subInfoWrapper {
+  height: auto !important;
+}
+.subInfo {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+}
+.subInfo.openSubInfo {
+  max-height: 130px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondaryBackground);
+  border-radius: 16px;
+  padding: 32px;
+}
+.infoSections.crosschain{
+  flex:1;
+}
+.infoSections {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+.infoBlock {
+  display: flex;
+  align-items: center;
+}
+.label {
+  color: var(--secondaryFont);
+  margin-right: 7px;
+  font-size: 16px;
+}
+.wrapperClarification {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+.wrapperNumberFormat {
+
+}
+
+.separator{
+    height: 0px;
+    width: 100%;
+    margin: 0px 10px;
+    border-top: dotted 8px #151a1d;
+    min-width:10px;
+}
+
+.activeSeparator{
+    border-top: solid 3px #FF6666;
+    background-color: red;
+}

@@ -1,0 +1,104 @@
+.wrapperField {
+  position: relative;
+}
+
+.field {
+  display: block;
+  border: none;
+  padding: 16px 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--defaultButton);
+  color: var(--textColor);
+  outline: none;
+  border: 1px solid var(--greenHover);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+
+.button:hover {
+  background-color: var(--greenHover);
+}
+
+.button {
+  height: 100%;
+  padding: 10px 30px;
+  color: var(--font);
+  background-color: var(--green);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  min-height: 56px;
+}
+
+.field::placeholder {
+  color: var(--textPlaceholderColor);
+}
+
+/* custome styles per component */
+
+.homepageCallMe .field {
+  height: 50px;
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.homepageCallMe .button {
+  position: static;
+  margin-top: 20px;
+  padding: 15px 40px;
+  transform: translateY(0);
+  min-height: auto;
+  font-size: 14px;
+}
+
+.homepageCallMe .button:hover {
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+  .homepageSubscribe .field {
+    height: 60px;
+  }
+
+  .homepageSubscribe .button {
+    position: static;
+    margin-top: 10px;
+    transform: translateY(0);
+  }
+
+  .homepageSubscribe .button:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 567px) {
+  .homepageSubscribe .field {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .homepageSubscribe .button {
+    font-size: 14px;
+    min-height: 48px;
+    width: 100%;
+  }
+
+  .container {
+    flex-flow: column;
+  }
+}

@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  tss-server:
+    image: tss-server
+    container_name: tss-server
+    restart: always 
+    env_file: .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NPM_TOKEN: $NPM_TOKEN
+    volumes:
+     - ./handled-signed-tx-hashes.json:/tss-server/handled-signed-tx-hashes.json
+    # TODO: Also it's necessary to manually expose all ports in .env GG20_AVAILABLE_PORTS
+    ports:
+     - $PORT:$PORT

@@ -1,0 +1,12 @@
+{
+  "tokens": [
+    {
+      "name": "Astrafer",
+      "address": "0xDfCe1e99A31C4597a3f8A8945cBfa9037655e335",
+      "symbol": "ASTRAFER",
+      "decimals": 18,
+      "chainId": 137,
+      "logoURI": "https://assets.coingecko.com/coins/images/26246/small/ATSRA_Token.png?1657276411"
+    }
+  ]
+}

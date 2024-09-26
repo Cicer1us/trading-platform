@@ -1,0 +1,13 @@
+.checkBoxWrapper {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+.checkBoxTitle {
+    font-size: 16px;
+    line-height: 0;
+    color: var(--font);
+}

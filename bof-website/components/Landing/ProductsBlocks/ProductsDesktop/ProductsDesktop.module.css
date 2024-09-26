@@ -1,0 +1,120 @@
+.sectionTitle {
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 87px;
+  margin-bottom: 64px;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  gap: 25px;
+}
+
+.crossChainProtocol {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/images/Landing/products/crosschain.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: border-box;
+  background-size: cover;
+}
+
+.crossChainSwaps {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/images/Landing/products/crosschaintrading.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: border-box;
+  background-size: cover;
+}
+
+.tradingPlatform {
+  display: flex;
+  flex-direction: column;
+  grid-column: 3/4;
+  grid-row: 1/3;
+  background-image: url(/images/Landing/products/trading.png), url(/images/Landing/products/tradingplatform.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: center, center;
+  background-position-y: 20em, center;
+  background-clip: border-box, border-box;
+  background-size: 80%, cover;
+  box-sizing: content-box, content-box;
+}
+
+.AllPayWidget {
+  grid-column: 1/3;
+  background-image: url(/images/Landing/products/allpaycode.png), url(/images/Landing/products/AllPaywidget.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: right, right;
+  background-position-y: bottom, bottom;
+  background-clip: border-box, border-box;
+  background-size: 40%, cover;
+  display: grid;
+  grid-template-columns: 0.6fr auto;
+  column-gap: 20px;
+}
+
+.widgetContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  font-weight: 700;
+  font-size: 14px;
+  color: #38d9c0;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 24px;
+}
+
+.content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #c5c9c9;
+  margin-top: 16px;
+}
+
+.btn {
+  height: 48px;
+  width: 60%;
+  margin-top: 40px;
+}
+
+@media (max-width: 1920px) {
+  .tradingPlatform {
+    background-position-y: 20em, center;
+    background-size: 80%, cover;
+  }
+
+  .AllPayWidget {
+    background-size: 30%, cover;
+  }
+}
+
+@media (max-width: 1600px) {
+  .AllPayWidget {
+    background-size: 40%, cover;
+  }
+}
+
+@media (max-width: 1366px) {
+  .tradingPlatform {
+    background-position-y: 25em, center;
+    background-size: 80%, cover;
+  }
+}
+
+/*chnage to tablet view*/
+@media (max-width: 1150px) {
+}

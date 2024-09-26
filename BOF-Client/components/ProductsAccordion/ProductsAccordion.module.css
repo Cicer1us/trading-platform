@@ -1,0 +1,71 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .sectionTitle {
+    padding: 32px 32px 10px;
+    font-size: 40px;
+  }
+
+  .accordionWrap {
+    
+  }
+  
+  .imageWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-image: url(/images/newImages/landing/gradientProducts.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  
+  .image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity var(--animation-duration) ease;
+    grid-area: photo;
+    object-fit: cover;
+  }
+  
+  .image>img {
+    object-fit: cover;
+    width: 100%
+  }
+  
+  .image.active {
+    opacity: 1;
+    position: relative;
+    transition: opacity var(--animation-duration) ease var(--animation-duration);
+  }
+  
+  @media (max-width: 992px) {
+    .wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .image {
+      display: none;
+    }
+
+    .imageWrapper {
+      display: none;
+    }
+  
+  }
+  
+  @media (max-width: 768px) {
+    .wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+  

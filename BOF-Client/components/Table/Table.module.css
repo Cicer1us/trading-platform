@@ -1,0 +1,191 @@
+.tableWrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 100%);
+  padding-bottom: 1rem;
+}
+
+.tableContainer {
+  position: relative;
+  border-radius: 16px;
+  min-height: 100px;
+}
+
+.limitHeight {
+  max-height: 42rem;
+}
+
+.table {
+  width: 100%;
+  font-size: 18px;
+  padding: 0 40px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.thead td {
+  color: var(--secondaryFont);
+  font-size: 16px;
+}
+
+.headerCell {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  align-items: end;
+  cursor: pointer;
+}
+
+.thead tr {
+  height: 6.5rem;
+}
+
+.tbody tr {
+  height: 6.5rem;
+}
+
+.thead td.desc svg {
+  transform: rotate(180deg);
+}
+
+.thead td,
+.tbody td {
+  white-space: nowrap;
+}
+
+.thead td:not(:last-child),
+.tbody td:not(:last-child) {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.tbody td.redColor {
+  color: var(--red);
+}
+
+.tbody td.greenColor {
+  color: var(--green);
+}
+
+.tbody td.violetColor {
+  color: var(--violet);
+}
+
+.tbody td.violetUnderlinedColor {
+  color: var(--violet);
+}
+
+.tbody td.violetUnderlinedColor a {
+  font-weight: bold;
+  border-bottom: 2px solid var(--violet);
+}
+
+.tbody td.greenColor a {
+  font-weight: bold;
+  border-bottom: 2px solid var(--green);
+}
+
+.tbody td.yellowColor {
+  color: var(--yellow);
+}
+
+.tbody td.yellowColor a,
+.tbody td.yellowColor span {
+  font-weight: bold;
+  border-bottom: 2px solid var(--yellow);
+  cursor: pointer;
+}
+
+.tbody td.yellowWithoutUnderlineColor {
+  color: var(--yellow);
+}
+
+.tbody td.yellowWithoutUnderlineColor a {
+  font-weight: bold;
+}
+
+.tbody td.redColor {
+  color: var(--red);
+}
+
+.tbody td.redColor a {
+  font-weight: bold;
+  border-bottom: 2px solid var(--red);
+}
+
+.tbody td.changeDown {
+  color: var(--red);
+}
+
+.borderRight {
+  border-right: 1px solid var(--transparentWhite);
+}
+
+.help {
+  margin-left: 0.8rem;
+  display: flex;
+}
+
+
+.actionStyle.disable>.actionButton {
+  color: var(--secondaryFontDisabled);
+  cursor: default;
+}
+
+.actionButton {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.plActionStyle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 160px;
+  height: inherit;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.setItButton {
+  margin-left: 10px;
+  max-width: 80px;
+}
+
+.chains {
+  display: flex;
+  column-gap: 6px;
+  min-width: 130px;
+}
+
+
+.chainNotAvailable {
+  font-size: 13px;
+  color: var(--secondaryFont);
+}
+
+@media (max-width: 767px) {
+  .tableWrapper {
+    padding-bottom: 1.4rem;
+  }
+
+  .table {
+    padding: 0 20px;
+    font-size: 16px;
+  }
+
+  .tbody tr {
+    height: 5rem;
+  }
+
+  .thead tr {
+    height: 5rem;
+  }
+
+  .thead td:not(:last-child),
+  .tbody td:not(:last-child) {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+}

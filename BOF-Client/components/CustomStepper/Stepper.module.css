@@ -1,0 +1,70 @@
+.wrapper {
+  --blue: #2C2C43;
+  --redColor: #ff6666;
+
+  --bgProgressColor: var(--blue);
+  --bgSelectedColor: var(--redColor);
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stepNumber,
+.selectedStep {
+  font-size: 14px;
+  font-weight: 700;
+  background: var(--bgProgressColor);
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+}
+
+.checkMark {
+  width: 15px;
+  height: 11px;
+}
+
+.selectedStep {
+  background: var(--bgSelectedColor);
+}
+
+.stepTitle {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.progress,
+.selectedProgress {
+  width: 100%;
+  height: 3px;
+  background: var(--bgProgressColor);
+  transition: width 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  margin-top: 15px;
+}
+
+.selectedProgress {
+  background: var(--bgSelectedColor);
+}
+
+@media (max-width: 767px) {
+  .progress {
+    margin: 15px 10px 0 10px;
+  }
+
+  .stepTitle {
+    display: none;
+  }
+}

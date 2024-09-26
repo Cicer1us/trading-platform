@@ -1,0 +1,78 @@
+.sectionCenterImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleCenter {
+  font-size: 36px;
+  color: var(--font);
+  font-weight: 700;
+}
+
+.textCenter {
+  font-size: 18px;
+  line-height: 1.6em;
+  color: var(--secondaryFont);
+  max-width: 600px;
+  margin: 0 0 80px 0;
+  text-align: center;
+}
+
+.sectionLeftRightImage {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sectionImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 45%;
+}
+
+.sectionText {
+  max-width: 60%;
+  min-width: 50%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 54.6% 45.4%;
+}
+
+.imgContainer {
+  justify-self: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 50px;
+  margin-bottom: 24px;
+}
+
+.description {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  max-width: 500px;
+  margin-bottom: 56px;
+}
+.linkButton {
+  display: block;
+  width: 191px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    display: block;
+  }
+  .imgContainer {
+    display: none;
+  }
+  .linkButton {
+    margin: 0;
+    width: 100%;
+  }
+}

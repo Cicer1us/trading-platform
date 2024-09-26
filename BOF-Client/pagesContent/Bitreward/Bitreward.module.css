@@ -1,0 +1,330 @@
+.container {
+  width: 100%;
+  max-width: 1290px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 24px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  font-family: Inter;
+  font-style: normal;
+  color: white;
+}
+
+.container section {
+  position: relative;
+}
+
+.container h1 {
+  margin: 0;
+}
+
+.container h2 {
+  margin: 0;
+}
+
+.dots1,
+.dots2,
+.dots3,
+.dots4,
+.dots5,
+.coins,
+.coins2,
+.coins3 {
+  position: absolute;
+}
+
+.dots1 {
+  top: 0;
+  left: 0;
+}
+
+.dots2 {
+  top: -30px;
+  left: -30px;
+}
+
+.dots3 {
+  right: 0;
+  top: -50px;
+}
+
+.dots4 {
+  right: -60px;
+  top: -25px;
+}
+
+.dots5 {
+  left: -30px;
+  top: 30px;
+}
+
+.coins {
+  right: -70px;
+  top: 70px;
+}
+
+.coins2 {
+  top: -140px;
+  left: 200px;
+}
+
+.coins3 {
+  left: -20px;
+  top: 15px;
+}
+
+.promoTitle {
+  padding: 130px 80px;
+  height: 100%;
+  margin-bottom: 400px;
+}
+
+.promoTitle .textContainer {
+  position: relative;
+  max-width: 531px;
+  z-index: 70;
+}
+
+.promoTitle .textContainer h1 {
+  font-size: 62px;
+  line-height: 60px;
+  margin: 0;
+}
+
+.promoTitle .textContainer p {
+  font-size: 18px;
+  line-height: 27px;
+  color: #c5c5c9;
+}
+
+.promoTitle .textContainer>div:last-of-type {
+  max-height: 64px;
+  max-width: 195px;
+  margin-top: 56px;
+}
+
+.promoTitle .imageContainer {
+  position: absolute;
+  max-height: 235px;
+  max-width: 159px;
+  top: -80px;
+  left: -70px;
+}
+
+.promoTitle .coinsImageContainer {
+  position: absolute;
+  right: -100px;
+  top: -105px;
+}
+
+.rewardInfo {
+  height: 800px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+.rewardInfo .phoneImageContainer {
+  height: 451px;
+  width: 344px;
+}
+
+.text {
+  position: relative;
+  height: 243px;
+  width: 470px;
+}
+
+.rewardInfo .text h2 {
+  font-size: 36px;
+  line-height: 57px;
+  margin: 0;
+}
+
+.rewardInfo .text p {
+  font-size: 18px;
+  line-height: 27px;
+  color: #c5c5c9;
+}
+
+.rewardInfo .maskImageContainer {
+  position: absolute;
+  height: 235px;
+  width: 159px;
+  top: -50px;
+  left: -50px;
+}
+
+.rewardInfo .usdIcon {
+  position: absolute;
+  top: -80px;
+}
+
+.terms {
+  height: 700px;
+}
+
+.termsTitle {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 28px;
+  line-height: 50px;
+  z-index: 70;
+}
+
+.termsTitle h2 {
+  margin: 0;
+}
+
+.termsTitle>div {
+  height: 64px;
+  width: 195px;
+}
+
+.rewardInfo .text>div:last-of-type {
+  height: 64px;
+  width: 195px;
+  margin-top: 56px;
+}
+
+.termsCards {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.timer .title {
+  font-size: 28px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.timer .title>div {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 57px;
+}
+
+.timer .title>div:last-of-type {
+  height: 64px;
+  width: 195px;
+}
+
+.timer .countdown {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0px;
+}
+
+.supportTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.supportTitle h2 {
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 50px;
+}
+
+.supportTitle p {
+  font-size: 18px;
+  line-height: 27px;
+  color: #c5c5c9;
+  max-width: 455px;
+}
+
+.supportCards {
+  margin-bottom: 162px;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .promoTitle {
+    padding: 0;
+    text-align: center;
+    margin-bottom: 420px;
+  }
+
+  .promoTitle .textContainer {
+    width: 343px;
+    height: 72px;
+  }
+
+  .promoTitle .textContainer h1 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .promoTitle .textContainer p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .promoTitle .textContainer>div:last-of-type {
+    max-width: 100%;
+    margin-top: 56px;
+  }
+
+  .promoTitle .imageContainer {
+    top: -10px;
+    left: 30px;
+  }
+
+  .termsCards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .rewardInfo {
+    padding: 0;
+    height: 600px;
+  }
+
+  .countdown {
+    justify-content: space-between;
+  }
+
+  .coinsImageContainer,
+  .phoneImageContainer {
+    display: none;
+  }
+
+  .termsTitle {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .termsTitle>div {
+    display: none;
+  }
+
+  .timer {
+    margin: 100px 0;
+  }
+
+  .supportTitle {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .container img {
+    display: none;
+  }
+
+  .termsCards img,
+  .supportCards img {
+    display: block;
+  }
+}

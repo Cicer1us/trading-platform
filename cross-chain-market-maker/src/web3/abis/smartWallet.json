@@ -1,0 +1,38 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        { "internalType": "address", "name": "to", "type": "address" },
+        { "internalType": "bytes", "name": "callData", "type": "bytes" },
+        { "internalType": "uint256", "name": "value", "type": "uint256" }
+      ],
+      "name": "execute",
+      "outputs": [
+        { "internalType": "bool", "name": "txStatus", "type": "bool" },
+        { "internalType": "bytes", "name": "data", "type": "bytes" }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    { "stateMutability": "payable", "type": "receive" }
+  ]
+}

@@ -1,0 +1,17 @@
+.tokenGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 28px;
+}
+
+@media (max-width: 992px) {
+  .tokenGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tokenGrid {
+    grid-gap: 9px;
+  }
+}

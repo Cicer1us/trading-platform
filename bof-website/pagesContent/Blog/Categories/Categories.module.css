@@ -1,0 +1,91 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+
+.sectionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 28px;
+  margin-bottom: 80px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+.button {
+  min-height: 50px;
+  border: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 0 22px;
+  background-color: var(--defaultButton);
+  color: var(--font);
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.button > div {
+  border-bottom: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.button.active > div {
+  font-weight: 700;
+  border-bottom: 2px solid var(--green);
+}
+
+.button:not(.active):hover {
+  cursor: pointer;
+  background-color: var(--greenHover);
+}
+
+@media (max-width: 992px) {
+  .sectionHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    font-size: 14px;
+  }
+
+  .sectionGrid {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    justify-content: flex-start;
+  }
+
+  .sectionGrid {
+    grid-template-columns: 1fr;
+    grid-gap: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sectionHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+  }
+
+  .wrapper {
+    font-size: 14px;
+  }
+
+  .button {
+    padding: 15px 18px;
+  }
+}

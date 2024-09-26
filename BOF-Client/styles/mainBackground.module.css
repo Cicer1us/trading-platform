@@ -1,0 +1,115 @@
+.wrapper {
+  min-height: 100vh;
+  max-width: var(--maxContentWidth);
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.wrapper:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-color: var(--background);
+}
+
+.content {
+  max-width: calc(var(--width) + var(--padding) * 2);
+  width: 100%;
+  margin: 0 auto;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  min-height: calc(100vh - var(--headerHeight) - var(--footerHeight));
+}
+
+.backgroundEffects {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 15vh;
+}
+
+.redCircle1, .redCircle2, .greenCircle {
+  filter: blur(50px);
+}
+
+.greenCircle {
+  background-color: rgba(56, 217, 192, 0.27);
+  height: 580px;
+  width: 680px;
+  border-radius: 99999px;
+  position: relative;
+}
+
+.redCircle1 {
+  background-color: rgba(125, 89, 85, 1);
+  height: 80px;
+  width: 400px;
+  border-radius: 450px;
+  position: absolute;
+  top: 230px;
+  left: 145px;
+}
+
+.redCircle2 {
+  background-color: rgba(255, 102, 102, 1);
+  height: 280px;
+  width: 320px;
+  border-radius: 99999px;
+  position: absolute;
+  top: 290px;
+  left: 180px;
+}
+
+@media (max-width: 1440px) {
+  .wrapper:before {
+    background-size: 290px 411px, 603px 603px;
+  }
+}
+
+@media (max-width: 768px) {
+  .redCircle1, .redCircle2, .greenCircle {
+    filter: blur(35px);
+  }
+
+  .greenCircle {
+    height: 270px;
+    width: 350px;
+  }
+
+  .redCircle1 {
+    background-color: rgba(125, 89, 85, 1);
+    height: 50px;
+    width: 200px;
+    border-radius: 250px;
+    position: absolute;
+    top: 110px;
+    left: 80px;
+  }
+
+  .redCircle2 {
+    background-color: rgba(255, 102, 102, 1);
+    height: 120px;
+    width: 200px;
+    border-radius: 99999px;
+    position: absolute;
+    top: 140px;
+    left: 80px;
+  }
+
+  .wrapper:before {
+    background-size: 227px 411px, 478px 703px;
+    background-attachment: initial;
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "@bitoftrade/tss-core",
+  "version": "0.0.14",
+  "license": "MIT",
+  "author": "bitoftrade",
+  "main": "dist/index.js",
+  "module": "dist/tss-core.cjs.production.min.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "deploy": "npm version patch & npm publish",
+    "analyze": "size-limit --why",
+    "build": "dts build",
+    "lint": "npx prettier src --write",
+    "prepare": "dts build",
+    "size": "size-limit",
+    "start": "dts watch",
+    "test": "dts test",
+    "contract-types": "typechain --target web3-v1 --out-dir contracts/types './src/abi/*.json'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "dts lint & npm version patch"
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "size-limit": [
+    {
+      "path": "dist/tss-core.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/tss-core.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@tsconfig/recommended": "^1.0.1",
+    "@typechain/web3-v1": "^6.0.1",
+    "dts-cli": "^1.5.2",
+    "husky": "^8.0.1",
+    "size-limit": "^7.0.8",
+    "tslib": "^2.4.0",
+    "typechain": "^8.1.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/solidity": "^5.7.0"
+  }
+}

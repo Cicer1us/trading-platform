@@ -1,0 +1,38 @@
+.button {
+  background-color: var(--defaultButton);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.button>svg {
+  stroke: var(--secondaryFont);
+  transition: stroke 0.3s;
+}
+
+.button:not(:active) {
+  transition: transform 200ms linear;
+}
+
+.button:active {
+  transform: rotate(-180deg);
+}
+
+.button:focus>svg {
+  stroke: var(--font);
+}
+
+.button:active>svg,
+.button:hover>svg {
+  stroke: var(--green);
+}
+
+.disabled {
+  pointer-events: none;
+  /* background-color: var(--disabled); */
+}

@@ -1,0 +1,50 @@
+.wrapper {
+  --animation-duration: 0.5s;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 70px;
+  grid-row-gap: 16px;
+}
+
+.imageWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  /*transition: opacity var(--animation-duration) ease;*/
+}
+
+.image.active {
+  opacity: 1;
+  position: relative;
+  /*transition: opacity var(--animation-duration) ease var(--animation-duration);*/
+}
+
+@media (min-width: 993px) {
+  .widgetBtn {
+    width: 219px;
+  }
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.accordionWidget {
+  position: relative;
+}

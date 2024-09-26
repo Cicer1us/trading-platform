@@ -1,0 +1,12 @@
+{
+  "tokens": [
+    {
+      "chainId": 43114,
+      "address": "0x65378b697853568dA9ff8EaB60C13E1Ee9f4a654",
+      "decimals": 18,
+      "name": "Husky",
+      "symbol": "HUSKY",
+      "logoURI": "https://raw.githubusercontent.com/pangolindex/tokens/main/assets/43114/0x65378b697853568dA9ff8EaB60C13E1Ee9f4a654/logo_24.png"
+    }
+  ]
+}

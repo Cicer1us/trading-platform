@@ -1,0 +1,45 @@
+# endpoints list
+# https://bof-allpay-dev.azurewebsites.net/#/Payments/PaymentsController_getPaymentsVolume
+
+# moralis api
+# https://deep-index.moralis.io/api-docs/
+
+@protocol=https
+@host=bof-allpay-dev.azurewebsites.net
+# @host=192.168.0.107:3001
+
+# local
+# @access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQGRvbWFpbi5jb20iLCJpYXQiOjE2ODkwNTkzNjMsImV4cCI6MTY4OTE0NTc2M30.MEWCzi9dw5JPINqiElAe4PYcwJeSl4z-4aqYXjr9V2g
+
+# remote
+@access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlFhQGJpdG9mdHJhZGUuY29tIiwicmVxdWlyZXNPdHAiOmZhbHNlLCJpYXQiOjE2OTExMzc3NDQsImV4cCI6MTY5MTIyNDE0NH0.7ibFVn2I014nU5z6n2K2wu-PaqH6HdTKUxH55hIoEYw
+
+### login
+POST {{protocol}}://{{host}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "user1@domain.com",
+    "password": "PassD1ff1!fe332",
+    "rememberMe": true
+}
+
+### login
+POST {{protocol}}://{{host}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "Qa@bitoftrade.com",
+    "password": "Qa12345678",
+    "rememberMe": true
+}
+
+### Payments
+GET {{protocol}}://{{host}}/payments
+Authorization: Bearer {{access_token}}
+
+### Payments volume
+@fromDate=2023-07-06T15:22:45.487Z
+@toDate=2023-07-06T15:22:45.487Z
+GET {{protocol}}://{{host}}/payments/volume?fromDate={{fromDate}}&toDate={{toDate}}
+Authorization: Bearer {{access_token}}

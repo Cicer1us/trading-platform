@@ -1,0 +1,10 @@
+.tabsList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+
+.tabsList::-webkit-scrollbar {
+    display: none;
+  }

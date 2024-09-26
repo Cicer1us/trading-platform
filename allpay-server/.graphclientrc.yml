@@ -1,0 +1,23 @@
+sources:
+  - name: payment
+    handler:
+      graphql:
+        endpoint: https://api.thegraph.com/subgraphs/name/kanievksyidanylo/{context.chainName:cross-chain-swaps-bsc}
+
+additionalTypeDefs: |
+  extend type Payment {
+    chainId: Int!
+  }
+
+  extend type Query {
+    crossPayments(orderBy: Payment_orderBy, orderDirection: OrderDirection, chainIds: [Int!]!, orderId_in: [String!]!): [Payment!]!
+  }
+
+additionalResolvers:
+  - ./src/common/resolvers.js
+
+documents:
+  - ./graphql/payments.graphql
+
+codegen:
+  contextType: 'MeshContext & { chainName: string }'

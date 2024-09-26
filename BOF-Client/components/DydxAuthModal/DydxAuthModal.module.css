@@ -1,0 +1,177 @@
+.wrapperModal {
+  font-size: 16px;
+}
+
+.titleModal {
+  font-size: 24px;
+  margin: 0;
+  margin-right: 8px;
+}
+
+.descriptionModal {
+  margin: 0 0 24px;
+}
+
+.sectionTitleModal {
+  font-size: 18px;
+  margin: 0 0 14px;
+}
+
+.sectionModal {
+  padding: 24px 32px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0.55%, rgba(255, 255, 255, 0) 100%);
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  backdrop-filter: blur(42px);
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.lastSection {
+  margin-bottom: 48px;
+}
+
+.listModal {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItemModal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listItemModal:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.itemNameModal {
+  display: flex;
+  align-items: center;
+}
+
+.nameModal {
+  margin-right: 10px;
+}
+
+.itemValueModal {
+  text-align: right;
+  font-weight: 700;
+}
+
+.sectionModal p {
+  padding: 0;
+  margin: 0;
+}
+
+.actions {}
+
+.errorModal {
+  color: var(--red);
+}
+
+.riskTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.signWrapper {
+  display: flex;
+  padding: 24px 25px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--secondaryBackground);
+  box-sizing: border-box;
+  backdrop-filter: blur(42px);
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.active {
+  border: 2px solid var(--green);
+}
+
+.signTitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.signDescription {
+  color: var(--secondaryFont);
+  margin: 0;
+  font-size: 16px;
+  line-height: 21px;
+  max-width: 248px;
+}
+
+.stepWrapper {
+  border-radius: 50%;
+  background-color: var(--secondaryButton);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stepWrapper svg {
+  animation: spin 2s linear infinite;
+}
+
+.stepTitle {
+  color: var(--green);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.signWrapper:nth-of-type(3) {
+  margin-bottom: 48px;
+}
+
+.approveStepWrapper {
+  background-color: var(--secondaryButton);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .titleWrapper {
+    margin-bottom: 8px;
+  }
+
+  .stepWrapper,
+  .approveStepWrapper {
+    height: 32px;
+    width: 32px;
+    min-height: 32px;
+    min-width: 32px;
+  }
+}

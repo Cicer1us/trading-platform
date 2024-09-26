@@ -1,0 +1,49 @@
+/* Make tradingview chart transparent  */
+
+body {
+   background-color: transparent !important;
+   --defaultButton: #2B363B; 
+   --font: #fff;
+}
+
+.chart-container {
+   background: transparent !important;
+}
+
+.chart-container-border {
+   background: transparent !important;
+}
+
+.group-wWM3zP_M {
+   background: transparent !important;
+}
+
+#header-toolbar-fullscreen,
+.wrap-18oKCBRc {
+   background: var(--defaultButton);
+   border-radius: 8px;
+}
+
+.wrap-18oKCBRc,
+#header-toolbar-fullscreen,
+.wrap-3tiHesTk .wrap-18oKCBRc .button-2ioYhFEY {
+   color: var(--font);
+}
+
+.wrap-3tiHesTk>div:nth-child(2) {
+   margin-left: 10px;
+}
+
+.button-2ioYhFEY:hover,
+.button-13wlLwhJ:hover::before,
+.button-2ioYhFEY:hover::before,
+.button-2ioYhFEY.isInteractive-20uLObIc.isOpened-p-Ume5l9:before,
+.menu-1fA401bY.button-13wlLwhJ.apply-common-tooltip.isOpened-1939ai3F::before {
+   background: var(--defaultButton) !important;
+   color: var(--font) !important;
+   border-radius: 8px !important;
+}
+
+*>.layout__area--top {
+   background-color: transparent !important;
+}

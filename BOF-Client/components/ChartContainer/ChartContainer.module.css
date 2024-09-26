@@ -1,0 +1,136 @@
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 40px 20px;
+  align-self: start;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+}
+
+.priceContainer {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  max-width: 100%;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  justify-content: right;
+}
+
+.header {
+  display: flex;
+}
+
+.select {
+  min-width: 160px;
+}
+
+.price {
+  margin: 0;
+  font-weight: bold;
+  font-size: 24px;
+  min-height: 24px;
+  margin-right: 10px;
+  color: var(--font);
+}
+
+.priceChange {
+  display: flex;
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--green);
+  min-height: 25px;
+}
+
+.percentChangeText {
+  font-size: 15px;
+}
+
+.dateContainer {
+  margin-top: 6px;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 16px;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: var(--defaultButton);
+  border-radius: 8px;
+  width: 48px;
+  color: var(--secondaryFont);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.date:hover {
+  color: var(--green);
+}
+
+.date.active {
+  font-weight: bold;
+  color: var(--font);
+}
+
+.date.disabled {
+  font-weight: 400;
+  color: var(--disabledFont);
+  background-color: var(--borderColor);
+  pointer-events: none;
+}
+
+.negative {
+  color: var(--red);
+}
+
+.mobileChartView {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 1919px) {
+  .container {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .container {
+    padding: 14px;
+  }
+
+  .priceChange {
+    flex-direction: column;
+  }
+
+  .priceContainer {
+    flex-flow: column;
+  }
+}
+
+.chart {
+  margin-top: 12px;
+  flex: 1;
+}
+
+.loader {
+  display: grid;
+  place-content: center;
+  height: 100%;
+  min-height: 300px;
+}

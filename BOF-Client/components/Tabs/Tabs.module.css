@@ -1,0 +1,27 @@
+.tabs,
+.transactionsTabs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--defaultButton);
+  border-radius: 8px;
+  height: 42px;
+  min-height: 42px;
+  padding: 0 6px;
+}
+
+.transactionsTabs {
+  width: 400px;
+}
+
+@media (max-width: 767px) {
+  .tabs {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 567px) {
+  .transactionsTabs {
+   width: 100%; 
+  }
+}

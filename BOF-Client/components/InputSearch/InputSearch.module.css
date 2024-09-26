@@ -1,0 +1,155 @@
+.wrapper {
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+  font-size: 16px;
+  width: 100%;
+  background-color: var(--defaultButton);
+  color: var(--secondaryFont);
+  padding: 0 20px;
+  border-radius: 8px;
+  min-height: 48px;
+  border: 2px solid transparent;
+  border-color: #38d9c0;
+}
+
+.inputWrapper {
+  display: flex;
+  flex: 1;
+}
+
+.closeIcon {
+  display: flex;
+}
+
+.active>.wrapper {
+  border: 2px solid var(--green);
+}
+
+.dropdown:hover,
+.active>.dropdown {
+  display: block;
+}
+
+.wrapper {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+
+.inputSearch {
+  flex: 1;
+  background: transparent;
+  outline: none;
+  border: 0;
+  transition: border 0.3s, color 0.3s;
+  text-overflow: ellipsis;
+  color: var(--font);
+}
+
+.inputSearch::placeholder {
+  color: var(--secondaryFont);
+}
+
+.inputSearch:hover {
+  outline: none;
+  border-color: var(--font)
+}
+
+.inputSearch:focus {
+  outline: none;
+  border-color: var(--green);
+  color: var(--font);
+}
+
+.inputSearch:focus+svg {
+  stroke: var(--font);
+}
+
+.dropdown {
+  display: none;
+  z-index: 2;
+  background-color: var(--defaultButton);
+  border-radius: 8px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 8px;
+  position: absolute;
+}
+
+.search {
+  flex-shrink: 0;
+  position: relative;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.mobileSearchIcon {
+  display: none;
+}
+
+.desktopSearchIcon {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 12px;
+  }
+
+  .inputWrapper {
+    position: absolute;
+    right: 100%;
+    display: none;
+    align-items: center;
+    font-size: 16px;
+    background-color: var(--defaultButton);
+    color: var(--secondaryFont);
+    padding: 0 20px;
+    border-radius: 8px;
+    min-height: 48px;
+    border: 2px solid transparent;
+    margin-right: 8px;
+    width: calc(90vw - 44px);
+  }
+
+  .active .inputWrapper {
+    border: 2px solid var(--green);
+    display: flex;
+  }
+
+  .dropdown {
+    right: 100%;
+    width: calc(90vw - 44px);
+    left: auto;
+    margin-right: 8px;
+  }
+
+  .active>.wrapper {
+    border: 2px solid transparent;
+  }
+
+  .active svg {
+    stroke: var(--green);
+  }
+
+  .closeIcon {
+    display: none;
+  }
+
+
+  .mobileSearchIcon {
+    display: flex;
+    align-items: center;
+  }
+
+  .desktopSearchIcon {
+    display: none;
+  }
+
+  .closeDropdownIcon {
+    display: flex;
+    align-items: center;
+  }
+}

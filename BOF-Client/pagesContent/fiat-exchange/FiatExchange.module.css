@@ -1,0 +1,13 @@
+.content {
+    padding: 15px;
+    width: 380px;
+    height: 440px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc(50vh - 240px - var(--headerHeight));
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}

@@ -1,0 +1,26 @@
+.td {
+  --width: 40px;
+  width: var(--width);
+}
+.button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--secondaryBackground);
+  border-radius: 8px;
+  color: transparent;
+  width: var(--width);
+  height: var(--width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button .icon {
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+.button.active .icon {
+  transform: rotate(180deg);
+}

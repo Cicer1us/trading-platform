@@ -1,0 +1,46 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  padding-top: 20px;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(375px, 430px) minmax(375px, 1fr);
+  grid-gap: 20px;
+}
+
+.chartContainer {
+  display: flex;
+  row-gap: 20px;
+  flex-flow: column;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.chartContainer.chartBalanceDeposit {
+  display: flex;
+  flex-direction: column;
+}
+
+.balanceDepositContainer {
+  display: grid;
+  grid-template-columns: minmax(240px, 427px) minmax(240px, 577px);
+  grid-gap: 20px;
+}
+
+@media (max-width: 1140px) {
+  .wrapper {
+    padding-top: 10px;
+  }
+
+  .container {
+    grid-template-columns: minmax(270px, 1fr);
+  }
+
+  .balanceDepositContainer {
+    grid-template-columns: 1fr;
+  }
+}

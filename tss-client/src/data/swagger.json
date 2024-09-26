@@ -1,0 +1,170 @@
+{
+   "openapi":"3.0.3",
+	"info": {
+		"version": "1.0.0",
+		"title": "TSS Client",
+		"description": "TSS Client"
+	},
+	"host": "",
+	"basePath": "/",
+   "tags":[
+      {
+         "name":"TSS Client"
+      }
+   ],
+	"schemes": ["http"],
+	"consumes": ["application/json"],
+	"produces": ["application/json"],
+	"paths": {
+		"/ping": {
+			"get": {
+				"description": "Check system",
+            "tags":[
+               "TSS Client"
+            ],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/key-shares-list": {
+			"get": {
+				"description": "Get list of key shares",
+            "tags":[
+               "TSS Client"
+            ],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/key-share-admin-address": {
+			"get": {
+				"description": "KeyShareAdmin address (Unique id for current TSS client)",
+            "tags":[
+               "TSS Client"
+            ],
+				"responses": {
+					"200": {
+						"type": "string",
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/key-share-holder-address": {
+			"get": {
+				"description": "KeyShareHolder address",
+            "tags":[
+               "TSS Client"
+            ],
+				"responses": {
+					"200": {
+						"type": "string",
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/connection-status": {
+			"get": {
+				"description": "True if tss-client is connected to server",
+            "tags":[
+               "TSS Client"
+            ],
+				"responses": {
+					"200": {
+						"type": "boolean",
+						"description": "OK"
+					}
+				}
+			}
+		},
+		"/connect": {
+			"post": {
+				"description": "Connect TSS Client",
+				"requestBody":{
+					"content":{
+						"application/json":{
+							"schema":{
+								"$ref":"#/definitions/signedMessage"
+							}
+						}
+					}
+				},
+				"produces": ["text/plain"],
+            "tags":[
+               "TSS Client"
+            ],
+				"responses": {
+					"200": {
+						"type": "boolean"
+					}
+				}
+			}
+		},
+		"/disconnect": {
+			"post": {
+				"description":"Disconnect TSS Client",
+            "tags":[
+               "TSS Client"
+            ],
+				"requestBody":{
+					"content":{
+						"application/json":{
+							"schema":{
+								"$ref":"#/definitions/signedMessage"
+							}
+						}
+					}
+				},
+				"produces": ["text/plain"],
+				"responses": {
+					"200": {
+						"type": "boolean"
+					}
+				}
+			}
+		},
+		"/update-key-share-holder": {
+			"post": {
+				"description":"Update TSS Client (KeyShareHolder) Address",
+            "tags":[
+               "TSS Client"
+            ],
+				"requestBody":{
+					"content":{
+						"application/json":{
+							"schema":{
+								"$ref":"#/definitions/signedMessage"
+							}
+						}
+					}
+				},
+				"produces": ["text/plain"],
+				"responses": {
+					"200": {
+						"type": "boolean"
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"signedMessage": {
+			"required": ["message", "signature"],
+			"properties": {
+				"message": {
+					"type": "string"
+				},
+				"signature": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

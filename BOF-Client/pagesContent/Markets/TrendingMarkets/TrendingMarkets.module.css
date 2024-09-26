@@ -1,0 +1,123 @@
+.trending {
+   flex: 1;
+}
+
+.card {
+   padding: 32px 0;
+}
+
+.desktop {
+   display: flex;
+   column-gap: 20px;
+   justify-content: center;
+}
+
+.mobile {
+   display: none;
+}
+
+.cardTitle {
+   padding: 0 32px;
+   margin-bottom: 16px;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+}
+
+.title {
+   font-size: 24px;
+   font-weight: bold;
+}
+
+.secondaryText {
+   font-weight: 400;
+   font-size: 16px;
+   color: var(--arrowColor);
+}
+
+.list {
+   display: flex;
+   flex-flow: column;
+}
+
+.list > *{
+   /* margin-top: 16px; */
+   padding: 8px 32px;
+}
+
+.icon {
+   border-radius: 50%;
+}
+
+.priceChange {
+   margin-left: auto;
+   font-weight: bold;
+}
+
+.token {
+   display: flex;
+   justify-content: space-between;
+   column-gap: 8px;
+   align-items: center;
+   font-size: 14px;
+}
+
+.token:hover {
+   background: var(--defaultButton);
+}
+
+.priceUp {
+   color: var(--green);
+}
+
+.priceDown {
+   color: var(--red);
+}
+
+.symbol {
+   font-size: 16px;
+   font-weight: bold;
+}
+
+.trendingType {
+   background-color: var(--defaultButton);
+   border-radius: 8px;
+   color: var(--secondaryFont);
+   font-size: 14px;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   flex: 1;
+   justify-content: center;
+}
+
+.trendingType.active .trendingTypeTitle {
+   font-weight: bold;
+   color: var(--font);
+   border-bottom: 2px solid var(--green);
+}
+
+.trendingTypeTitle {
+   height: 100%;
+   padding: 8px 0;
+   border-bottom: 2px solid transparent;
+}
+
+.trendingTypes {
+   display: flex;
+   margin-bottom: 16px;
+}
+
+.trendingTypes>*+* {
+   margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+   .desktop {
+      display: none;
+   }
+
+   .mobile {
+      display: flex;
+   }
+}

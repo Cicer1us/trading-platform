@@ -1,0 +1,14 @@
+{
+  "tokens": [
+    {
+      "name": "Sushi",
+      "symbol": "SUSHI",
+      "address": "0xae75A438b2E0cB8Bb01Ec1E1e376De11D44477CC",
+      "chainId": 250,
+      "decimals": 18,
+      "logoURI": "https://assets.spooky.fi/tokens/SUSHI.png",
+      "bridgeId": "sushiv2",
+      "nativeChain": 1
+    }
+  ]
+}

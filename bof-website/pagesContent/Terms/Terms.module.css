@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 100px 24px;
+  font-size: 18px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 16px;
+  color: var(--font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  max-width: 1000px;
+}

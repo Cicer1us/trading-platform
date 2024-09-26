@@ -1,0 +1,61 @@
+.section {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 100px 80px 32px;
+  }
+
+  .FooterSection {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 100px 80px 0;
+  }
+
+  .cardSection {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 80px;
+  }
+  
+  .wrapper {
+    max-width: 100vw;
+    min-height: 100vh;
+    font-family: Inter, serif;
+    font-size: 16px;
+    color: var(--font);
+  }
+
+  .subtitle {
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 50px;
+  }
+
+  @media (max-width: 680px) {
+    .subtitle {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 50px;
+    }
+  }
+
+  
+  @media (max-width: 480px) {
+    .section {
+      padding: 80px 24px 40px;
+    }
+
+    .FooterSection {
+      padding: 40px 24px 0;
+    }
+
+    .cardSection {
+      padding: 40px 24px 40px; 
+    }
+  }
+  
+  
+  
+  

@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.background {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/images/Landing/products/crosschaintrading.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: border-box;
+  background-size: cover;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.content {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #c5c9c9;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+.tradersWrap {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 20px;
+}

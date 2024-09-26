@@ -1,0 +1,5 @@
+export const LIMIT_FEE = '0.001000';
+// 0.05%
+export const LEVERAGE_ORDER_FEE = 0.001;
+export const BASIC_LEVERAGE_TOKEN = 'USDC';
+export const BASIC_LEVERAGE_TOKEN_ADDRESS = '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48';

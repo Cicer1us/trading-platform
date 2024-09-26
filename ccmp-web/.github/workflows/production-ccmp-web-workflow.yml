@@ -1,0 +1,70 @@
+name: Build ccmp-web production
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  ACR_LOGIN_SRV: ${{ secrets.ACR_NAME }}.azurecr.io
+  IMAGE_NAME: ${{ secrets.ACR_NAME }}.azurecr.io/ccmp_web_${{ github.ref_name }}:${{ github.sha }}
+  IMAGE_NAME_LATEST: ${{ secrets.ACR_NAME }}.azurecr.io/ccmp_web_${{ github.ref_name }}:latest
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+        name: Production
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+
+      - name: Create env file
+        run: |
+          touch .env
+          echo NEXT_PUBLIC_ZENDESK_API_KEY=${{ secrets.NEXT_PUBLIC_ZENDESK_API_KEY }} >> .env
+
+
+      - name: npm install, build, and test
+        run: |
+          npm ci
+          npm run build
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: env_file
+          path: .env
+
+  build_and_push_to_acr:
+      needs: build
+      runs-on: ubuntu-latest
+      if: github.ref == 'refs/heads/master'
+      
+      steps:
+        - uses: actions/checkout@v2
+
+        - uses: actions/download-artifact@v2
+          with:
+            name: env_file
+
+        - uses: azure/docker-login@v1
+          with:
+            login-server: ${{ env.ACR_LOGIN_SRV }}
+            username: ${{ secrets.ACR_USERNAME }}
+            password: ${{ secrets.ACR_PASSWORD }}
+
+        - run: docker build --build-arg NPM_TOKEN=${{ env.NPM_TOKEN }} . -t ${{ env.IMAGE_NAME_LATEST }}
+        - run: docker push ${{ env.IMAGE_NAME_LATEST }}
+
+        - run: docker tag ${{ env.IMAGE_NAME_LATEST }} ${{ env.IMAGE_NAME }}
+        - run: docker push ${{ env.IMAGE_NAME }}

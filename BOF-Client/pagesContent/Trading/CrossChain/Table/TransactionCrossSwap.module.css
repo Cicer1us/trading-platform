@@ -1,0 +1,82 @@
+.wrapper {
+  margin-bottom: 50px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 40px 0 0 40px;
+  margin: 0 0 24px;
+}
+
+.tableWrapper {}
+
+.link {
+  color: var(--secondaryFont);
+  font-size: 18px;
+  font-weight: 700;
+  display: none;
+  /*change when ready*/
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.warningText {
+  padding: 20px 40px;
+}
+
+.crossChainSwapTitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.crossChainSwap {
+  padding: 32px 176px;
+  background: var(--defaultButton);
+  border-radius: 16px;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 20px;
+    padding: 20px 0 0 20px;
+    margin: 0 0 15px;
+  }
+
+  .link {
+    display: none;
+    /*change when ready*/
+    white-space: nowrap;
+    margin-top: 15px;
+  }
+}
+
+.destinationColumn {
+  display: flex;
+  column-gap: 4px;
+}
+
+.destinationLink {
+  color: var(--green);
+  border-bottom: 1px solid var(--green);
+  font-weight: bold;
+}
+
+.emptyLink {
+  border-bottom: 1px solid var(--white);
+  font-weight: bold;
+}

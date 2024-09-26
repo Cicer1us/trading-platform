@@ -1,0 +1,116 @@
+.search {
+   width: 360px;
+   margin-left: auto;
+   display: flex;
+   width: 100%;
+   align-items: flex-end;
+   justify-content: space-between;
+   margin-bottom: 40px;
+   margin-top: 24px;
+}
+
+.symbol {
+   font-weight: bold;
+   color: var(--font);
+}
+
+.icon {
+   display: flex;
+}
+
+.token {
+   padding: 10px 16px;
+   display: flex;
+   align-items: center;
+   column-gap: 8px;
+   font-size: 14px;
+}
+
+.token:hover {
+   background-color: var(--darkGray);
+   cursor: pointer;
+}
+
+.dropdown {
+   max-height: 200px;
+   margin-right: 2px;
+   padding-top: 16px;
+   border: 2px solid var(--green);
+   border-radius: 8px;
+}
+
+.sectionTitle {
+   font-size: 12px;
+   line-height: 18px;
+   padding: 4px 16px;
+   color: var(--greenDisabled);
+   font-weight: bold;
+}
+
+.section {
+   display: flex;
+   flex-flow: column;
+}
+
+.placeholder {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 21px;
+   color: var(--secondaryFont);
+   padding: 16px;
+   margin: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.info {}
+
+.title {
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 32px;
+   margin-bottom: 16px;
+}
+
+.subtitle {
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 27px;
+   color: var(--secondaryFont);
+}
+
+.searchContainer {
+   width: 360px;
+}
+
+.subtitle span {
+   margin-left: 2px;
+   margin-right: 2px;
+}
+
+.marketCap {
+   color: var(--font);
+   font-weight: bold;
+}
+
+.percentUp {
+   color: var(--green);
+   font-weight: bold;
+}
+
+.percentDown {
+   color: var(--red);
+   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+   .searchContainer {
+      width: auto;
+   }
+
+   .search {
+      align-items: start;
+      padding: 0;
+   }
+}

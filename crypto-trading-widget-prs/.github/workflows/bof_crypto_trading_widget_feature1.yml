@@ -1,0 +1,63 @@
+name: Build bof-crypto-trading-widget-feature-1
+
+on:
+  push:
+    branches: [ feature/nft ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  ACR_LOGIN_SRV: ${{ secrets.ACR_NAME }}.azurecr.io
+  IMAGE_NAME: ${{ secrets.ACR_NAME }}.azurecr.io/feature1_bof_crypto_trading_widget:${{github.sha}}
+  IMAGE_NAME_LATEST: ${{ secrets.ACR_NAME }}.azurecr.io/feature1_bof_crypto_trading_widget:latest
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  NEXT_PUBLIC_APP_BRIDGE: ${{ secrets.NEXT_PUBLIC_APP_BRIDGE }}
+  NEXT_PUBLIC_INFURA_ID: ${{ secrets.NEXT_PUBLIC_INFURA_ID }}
+  NEXT_PUBLIC_MORALIS_PROXY_URL: ${{ secrets.NEXT_PUBLIC_MORALIS_PROXY_URL }}
+  NEXT_PUBLIC_APP_STORAGE: ${{ secrets.NEXT_PUBLIC_APP_STORAGE }}
+  NEXT_PUBLIC_CRYPTO_TRADING_WIDGET_URL: ${{ secrets.CRYPTO_TRADING_WIDGET_URL_DEV }}
+
+jobs:
+  build_and_push_to_acr:
+    runs-on: ubuntu-latest
+
+    if: github.ref == 'refs/heads/feature/nft'
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18.x'
+
+      - name: Create env file
+        run: |
+          touch .env
+          echo NPM_TOKEN=${{ secrets.NPM_TOKEN }} >> .env
+          echo NEXT_PUBLIC_APP_BRIDGE=${{ secrets.NEXT_PUBLIC_APP_BRIDGE }} >> .env
+          echo NEXT_PUBLIC_INFURA_ID=${{ secrets.NEXT_PUBLIC_INFURA_ID }} >> .env
+          echo NEXT_PUBLIC_MORALIS_PROXY_URL=${{ secrets.NEXT_PUBLIC_MORALIS_PROXY_URL }} >> .env
+          echo NEXT_PUBLIC_APP_STORAGE=${{ secrets.NEXT_PUBLIC_APP_STORAGE }} >> .env
+          echo NEXT_PUBLIC_CRYPTO_TRADING_WIDGET_URL=${{ secrets.CRYPTO_TRADING_WIDGET_URL_DEV }} >> .env
+
+      - name: npm ci, build, and test
+        run: |
+          npm install
+          npm run build
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: env_file
+          path: .env
+
+      - uses: azure/docker-login@v1
+        with:
+          login-server: ${{ env.ACR_LOGIN_SRV }}
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+
+      - run: docker build --build-arg NPM_TOKEN=${{ env.NPM_TOKEN }} . -t ${{ env.IMAGE_NAME }}
+      - run: docker push ${{ env.IMAGE_NAME }}
+      - run: docker build --build-arg NPM_TOKEN=${{ env.NPM_TOKEN }} . -t ${{ env.IMAGE_NAME_LATEST }}
+      - run: docker push ${{ env.IMAGE_NAME_LATEST }}

@@ -1,0 +1,94 @@
+.wrapperModal {
+  font-size: 16px;
+}
+.titleModal {
+  font-size: 24px;
+  margin: 0 0 24px;
+}
+.descriptionModal {
+  margin: 0 0 14px;
+  color: var(--secondaryFont);
+}
+.sectionTitleModal {
+  font-size: 18px;
+  margin: 0 0 14px;
+}
+.sectionModal {
+  padding: 24px 32px;
+  background: var(--secondaryBackground);
+  box-sizing: border-box;
+  backdrop-filter: blur(42px);
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+.sectionModal:nth-of-type(2) {
+  margin-bottom: 48px;
+}
+.listModal {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.listItemModal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.listItemModal:not(:last-child) {
+  margin-bottom: 14px;
+}
+.itemNameModal {
+  display: flex;
+  align-items: center;
+}
+.nameModal {
+  margin-right: 10px;
+  color: var(--secondaryFont);
+}
+.itemValueModal {
+  font-weight: 700;
+  text-align: right;
+}
+.sectionModal p {
+  padding: 0;
+  margin: 0;
+}
+.actionsModal {
+  height: 48px;
+  width: 100%;
+  max-width: 137px;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.errorModal {
+  color: var(--red);
+}
+
+.riskTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.actions {
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .sectionModal {
+    padding: 24px;
+  }
+  .wrapperModal {
+    font-size: 14px;
+  }
+  .titleModal {
+    font-size: 18px;
+    margin: 0 0 24px;
+  }
+}
+.riskDescription {
+  font-size: 14px;
+  line-height: 18px;
+}

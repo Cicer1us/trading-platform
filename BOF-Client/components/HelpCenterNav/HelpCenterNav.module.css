@@ -1,0 +1,73 @@
+.container {
+  --blue: #181d27;
+  --darkGreenColor: #1d3d41;
+  --grayColor: #c5c5c9;
+  --greenColor: #38d9c0;
+
+  --bgContainer: var(--blue);
+  --textColor: var(--grayColor);
+  --bgButton: var(--darkGreenColor);
+  --textButton: var(--greenColor);
+
+  --bgImageUrl: url('/images/newImages/shape-cone.png');
+
+  height: 100%;
+  width: 100%;
+  max-height: 283px;
+  padding: 78px;
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: minmax(250px, 500px) minmax(150px, 1fr);
+  background-color: var(--bgContainer);
+  background-image: var(--bgImageUrl);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  grid-gap: 20px;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+}
+.texts > h1 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 50px;
+}
+.texts > p {
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--textColor);
+}
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 182px;
+  padding: 10px;
+  background-color: var(--bgButton);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--textButton);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    max-height: 3750px;
+    background-size: cover;
+  }
+  .buttonWrapper {
+    justify-content: center;
+  }
+}

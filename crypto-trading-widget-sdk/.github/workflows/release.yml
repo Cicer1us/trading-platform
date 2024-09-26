@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18.16.0'
+
+      - name: Initialize Git user
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - name: install dependencies, build and release
+        run: |
+          npm ci
+          npm run build
+          npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          REACT_APP_INFURA_ID: ${{ secrets.REACT_APP_INFURA_ID }}
+          REACT_APP_BRIDGE: ${{ vars.REACT_APP_BRIDGE }}
+          REACT_APP_STORAGE: ${{ vars.REACT_APP_STORAGE }}
+          REACT_APP_WALLET_CONNECT_PROJECT_ID: ${{ vars.REACT_APP_WALLET_CONNECT_PROJECT_ID }}

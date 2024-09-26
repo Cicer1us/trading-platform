@@ -1,0 +1,51 @@
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      font-size: 18px;
+      margin-bottom: 19px;
+      margin-top: 2px;
+    }
+    
+    .details>span {
+      margin-bottom: 24px;
+      margin-top: 24px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    
+    .fees > div:last-of-type,
+    .estimation > div:last-of-type {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 21px;
+    }
+    
+    .fees,
+    .estimation {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      color: var(--secondaryFont);
+    }
+    
+    .fees {
+      margin-bottom: 12px;
+    }
+    
+    .detail {
+      display: flex;
+    }
+    
+    .detailTitle {
+      margin: 0 auto;
+      margin-right: 10px;
+    }
+    
+    @media (max-width: 767px) {
+      .grid:first-of-type {
+        margin-bottom: 0;
+      }
+    }

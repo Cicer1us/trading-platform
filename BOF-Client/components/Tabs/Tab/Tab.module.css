@@ -1,0 +1,35 @@
+.tab {
+  display: flex;
+  color: var(--secondaryFontDisabled);
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  transition: 0.3s;
+  position: relative;
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-weight: 400;
+  margin: 0 20px;
+  flex: 1;
+}
+
+.tab.active {
+  color: var(--font);
+  cursor: default;
+  border-bottom: 2px solid var(--green);
+  font-weight: bold;
+}
+
+.tab:not(.active):hover {
+  color: var(--secondaryFontDisabled);
+}
+
+@media (max-width: 767px) {
+  .tab {
+    flex-basis: 80px;
+  }
+}

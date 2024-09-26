@@ -1,0 +1,33 @@
+.btn {
+    min-height: 40px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--defaultButton);
+    color: var(--font);
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    padding: 0 20px 0 20px;
+    margin-left: 0;
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+.btn>div {
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
+  .title:not(.active):hover{
+    border-bottom: 2px solid var(--green);
+  }
+
+  @media (max-width: 520px) {
+    .btn {
+      background-color: transparent;
+      padding: 0;
+      align-items: flex-start;
+    }
+  }

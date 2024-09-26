@@ -1,0 +1,79 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  /* padding: 10px 70px 10px 32px; */
+  padding: 0;
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+  background-color: var(--defaultButton);
+  color: var(--secondaryFont);
+  min-height: 48px;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper>svg:last-of-type {
+  /* position: absolute; */
+  /* top: 50%;
+  right: 38px; */
+  display: block;
+  position: relative;
+  right: 5px;
+  transform: translate(0, -50%);
+  width: 14px;
+  height: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.wrapper.active>svg:last-of-type {
+  transform: translate(0, -50%) rotate(180deg);
+}
+
+.wrapper:hover {
+  border-color: var(--secondaryFont);
+}
+
+.wrapper:focus {
+  border-color: var(--green);
+  color: var(--font);
+}
+.small{
+  min-height: 32px;
+  background-color: var(--secondaryButton);
+}
+
+.title {
+  margin: 0 0 0 8px;
+}
+
+.imageWrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.small .imageWrapper{
+  margin-left: 10px;
+}
+.arrowWrapper {
+  margin: 0 10px;
+}
+.small .arrowWrapper{
+  right: 10px;
+}
+@media (max-width: 1000px) {
+  .title {
+    margin: 0 0 0 4px;
+  }
+}
+
+@media (max-width: 767px) {
+  .arrowWrapper {
+    position: absolute;
+    right: 6px;
+  }
+}

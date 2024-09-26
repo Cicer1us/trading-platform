@@ -1,0 +1,59 @@
+.label {
+    display: flex;
+    align-items: center;
+    color: var(--secondaryFont);
+    margin-bottom: 8px;
+}
+
+.balance {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.text {
+    margin-right: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--secondaryFont);
+}
+
+.helpTextWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 8px;
+}
+
+.positionLeft {
+    justify-content: flex-end;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.alertWrapper {
+    margin-top: 20px;
+}
+
+.buttonWrapper {
+    margin-top: 20px;
+}
+
+.notAllowed {
+    cursor: not-allowed;
+}
+
+.modal {
+    width: 480px;
+}
+
+.loaderWrapper {
+    margin-left: 5px;
+}
+
+.disableMouseEvents {
+    pointer-events: none;
+}

@@ -1,0 +1,28 @@
+.body {
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-family: Inter;
+}
+
+.pageWrapper {
+  background-image: radial-gradient(circle at 65% 3%, rgba(56, 217, 192, 0.2) 100px, transparent 500px),
+    radial-gradient(circle at 80% 5%, rgba(255, 102, 102, 0.2) 100px, transparent 500px),
+    radial-gradient(circle at 50% 14%, rgba(56, 217, 192, 0.2) 100px, transparent 300px),
+    radial-gradient(circle at 20% 24%, rgba(255, 102, 102, 0.2) 100px, transparent 300px),
+    radial-gradient(circle at 95% 26%, rgba(56, 217, 192, 0.2) 100px, transparent 300px),
+    radial-gradient(circle at 15% 36%, rgba(56, 217, 192, 0.2) 100px, transparent 300px),
+    radial-gradient(circle at 95% 41%, rgba(255, 102, 102, 0.082) 100px, transparent 300px),
+    radial-gradient(circle at 20% 59%, rgba(255, 102, 102, 0.041) 100px, transparent 300px),
+    radial-gradient(circle at 84% 69%, rgba(56, 217, 192, 0.2) 100px, transparent 300px),
+    radial-gradient(circle at 18% 75%, rgba(255, 102, 102, 0.2) 100px, transparent 300px),
+    radial-gradient(circle at 50% 82%, rgba(56, 217, 192, 0.2) 100px, transparent 300px),
+    radial-gradient(circle at 80% 90%, rgba(255, 102, 102, 0.2) 100px, transparent 300px);
+}
+
+@media (max-width: 767px) {
+}

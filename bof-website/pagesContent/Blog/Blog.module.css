@@ -1,0 +1,95 @@
+.wrapper {
+  --fontColor: #ffffff;
+}
+
+.section {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px 88px 40px;
+}
+
+.FooterSection {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 100px 80px 0;
+}
+
+.sectionArticles {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+}
+
+.section.hideSpace {
+  padding-bottom: 0;
+}
+
+.section.hideSpace .sectionHeader {
+  margin-bottom: 0;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.sectionTitle {
+  color: var(--fontColor);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 50px;
+  margin: 0;
+}
+
+.sectionSubTitle {
+  color: var(--fontColor);
+  font-size: 38px;
+  line-height: 1.3em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card {
+  background-image: url(/images/Landing/hero/gradient.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-clip: border-box;
+  background-size: cover;
+}
+
+@media (max-width: 992px) {
+  .sectionTitle {
+    font-size: 44px;
+  }
+
+  .sectionSubTitle {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 38px;
+  }
+
+  .sectionSubTitle {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .FooterSection {
+    padding: 40px 24px 0;
+  }
+}

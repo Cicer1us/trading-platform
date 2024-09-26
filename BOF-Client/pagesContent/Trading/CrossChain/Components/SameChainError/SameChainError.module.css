@@ -1,0 +1,25 @@
+.link {
+   color: var(--green);
+   border-bottom: 2px solid var(--green);
+   font-weight: bold;
+}
+
+.description {
+   line-height: 24px;
+}
+
+.switchNetworkButton {
+   margin-top: 8px;
+   text-transform: capitalize;
+   text-align: right;
+   font-size: 16px;
+   pointer-events: none;
+}
+
+.action {
+   color: var(--red);
+   text-decoration: underline;
+   cursor: pointer;
+   font-weight: bold;
+   pointer-events: all;
+}

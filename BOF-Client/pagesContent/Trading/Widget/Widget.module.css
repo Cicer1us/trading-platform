@@ -1,0 +1,154 @@
+.container {
+  padding: 40px;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 666px;
+  z-index: 2;
+}
+
+.title {
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--font);
+}
+
+.header {
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: end;
+  grid-gap: 16px;
+}
+
+.exchangeIcon {
+  background-color: var(--secondaryBackground);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28px;
+}
+
+.exchangeIconWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-bottom: 16px;
+}
+
+.connectButton {
+  border-radius: 16px;
+}
+
+.connectButtonText {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px;
+  margin: 0;
+}
+
+.notifyText {
+  font-size: 1.6rem;
+  line-height: 24px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.cancelIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.sectionConnectMetamask {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.selectToken {
+  position: absolute;
+  top: -110%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondaryBackground);
+  z-index: 80;
+  transition: top ease-in-out 0.5s;
+  pointer-events: none;
+}
+
+.selectToken.selectTokenShow {
+  top: 0;
+  pointer-events: auto;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.connectWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.connectTitle {
+  font-size: 19px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--font);
+}
+
+.connectDescription {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--secondaryFont);
+}
+
+.switchNetworkButton {
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.action {
+  color: var(--green);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  pointer-events: all;
+}
+
+.connectMetamaskTextWrapper {
+  margin-top: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.connectButtonWrapper {
+  width: 100%;
+  height: 56px;
+  max-height: 56px;
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 24px;
+    max-height: 585px;
+  }
+
+  .header {
+    margin-bottom: 24px;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
+}

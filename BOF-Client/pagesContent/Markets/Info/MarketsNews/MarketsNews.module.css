@@ -1,0 +1,42 @@
+.card {
+   padding-left: 0;
+   padding-right: 0;
+   padding-bottom: 12px;
+   display: flex;
+   flex-flow: column;
+   height: 560px;
+   max-height: 560px;
+}
+
+.search {
+   padding: 0 32px;
+}
+
+.loader {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex: 1;
+}
+
+.placeholder {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 21px;
+   color: var(--secondaryFont);
+   padding: 16px;
+   margin: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+@media (max-width: 768px) {
+   .search {
+      padding: 12px 12px 0;
+   }
+
+   .card {
+      padding: 0;
+   }
+}

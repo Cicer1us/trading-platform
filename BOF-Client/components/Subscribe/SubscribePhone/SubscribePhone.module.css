@@ -1,0 +1,26 @@
+.wrapper {
+  --darkGreenColor: #1d3d41;
+  --blue: #12141a;
+  --lightRedColor: #ffbfc0;
+
+  --bgErrorColor: var(--lightRedColor);
+  --textErrorColor: var(--blue);
+  --bgSuccessColor: var(--darkGreenColor);
+
+  width: 100%;
+}
+.successMessage {
+  background-color: var(--bgSuccessColor);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 28px;
+}
+.errorMessage {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--bgErrorColor);
+  color: var(--textErrorColor);
+  text-align: center;
+}

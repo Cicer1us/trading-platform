@@ -1,0 +1,23 @@
+.startTrading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff6666;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  white-space: nowrap;
+  max-width: fit-content;
+  border-radius: 10px;
+  border: none;
+  padding: 22px 40px;
+  cursor: pointer;
+  transition: transform 300ms ease, box-shadow 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+}
+
+.startTrading:hover {
+  background-color: #515b72;
+  transform: translate3d(0px, -2px, 0.01px);
+  color: #fff;
+}

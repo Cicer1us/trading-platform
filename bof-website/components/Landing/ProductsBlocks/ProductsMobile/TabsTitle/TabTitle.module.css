@@ -1,0 +1,30 @@
+.btn {
+  min-height: 40px;
+  min-width: 105px;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--defaultButton);
+  color: var(--font);
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  padding: 0 20px 0 20px;
+  font-size: 12px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.btn > div {
+  border-bottom: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.title {
+  justify-content: center;
+}
+
+.title:not(.active):hover {
+  border-bottom: 2px solid var(--green);
+}

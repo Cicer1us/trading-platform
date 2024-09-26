@@ -1,0 +1,127 @@
+.modal {
+   width: 860px;
+}
+
+.title {
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 32px;
+   margin: 0;
+   margin-bottom: 8px;
+}
+
+.subTitle {
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 24px;
+   color: var(--secondaryFont);
+   margin-bottom: 16px;
+}
+
+.link {
+   color: var(--green);
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 21px;
+   text-decoration-line: underline;
+}
+
+.buttonContainer {
+   max-width: 264px;
+   margin-top: 48px;
+}
+
+.wrapperModal {
+   font-size: 16px;
+}
+
+.titleModal {
+   font-size: 24px;
+   margin: 0 0 16px;
+   display: flex;
+   align-items: center;
+   column-gap: 16px;
+}
+
+.descriptionModal {
+   margin: 0 0 14px;
+   font-size: 18px;
+}
+
+.subTitleModal {
+   font-size: 16px;
+   color: var(--secondaryFont);
+   margin-bottom: 24px;
+   margin-top: 0;
+}
+
+.sectionTitleModal {
+   font-size: 18px;
+   margin: 0 0 14px;
+}
+
+.sectionModal {
+   padding: 24px 32px;
+   background-color: var(--secondaryBackground);
+   border-radius: 16px;
+   margin-bottom: 48px;
+}
+
+.lastSection {
+   margin-bottom: 48px;
+}
+
+.listModal {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.listItemModal {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.listItemModal:not(:last-child) {
+   margin-bottom: 14px;
+}
+
+.itemNameModal {
+   display: flex;
+   align-items: center;
+   margin-right: 30px;
+}
+
+.nameModal {
+   color: var(--secondaryFont);
+   margin-right: 10px;
+}
+
+.itemValueModal {
+   font-weight: 700;
+   text-align: right;
+}
+
+.sectionModal p {
+   padding: 0;
+   margin: 0;
+}
+
+.actionsModal {
+   display: flex;
+   column-gap: 14px;
+}
+
+.errorModal {
+   color: var(--red);
+}
+
+.riskTitle {
+   font-size: 18px;
+   font-weight: bold;
+   margin: 0;
+   margin-bottom: 8px;
+}
+
+.actions {}

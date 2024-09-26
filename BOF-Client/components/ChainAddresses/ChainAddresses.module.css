@@ -1,0 +1,140 @@
+.wrapper {
+  height: 100%;
+  position: relative;
+  outline: none;
+  height: inherit;
+  max-height: inherit;
+  min-height: inherit;
+  z-index: 90;
+}
+
+.wrapperInput {
+  position: relative;
+
+  width: 130px;
+  height: 30px;
+  border-radius: 8px;
+
+  margin-left: auto;
+  padding: 0 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+
+  cursor: pointer;
+
+  color: var(--font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+
+  background-color: var(--defaultButton);
+
+  border: 2px solid transparent;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+}
+
+.arrow>svg {
+  transition: 0.3s ease-in-out;
+}
+
+.wrapper:hover .wrapperInput,
+.wrapper.active .wrapperInput {
+  border: 2px solid var(--green);
+}
+
+.wrapper.active .menu {
+  opacity: 1;
+  visibility: visible;
+  border: 2px solid var(--green);
+}
+
+.wrapper.active .wrapperInput .arrow>svg {
+  transform: rotate(180deg);
+}
+
+.menu {
+  min-width: 220px;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  padding: 10px 0;
+  background-color: var(--defaultButton);
+  border: 1px solid var(--transparentWhite);
+  border-radius: 8px;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  max-height: 310px;
+  overflow: auto;
+}
+
+.menu.bottom {
+  top: 100%;
+  bottom: auto;
+}
+
+.menu.top {
+  top: auto;
+  bottom: 100%;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  padding: 6px 20px 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--font);
+  transition: 0.3s ease-in-out;
+  position: relative;
+  column-gap: 8px;
+}
+
+.option:hover {
+  background-color: var(--greenHover);
+  color: var(--font);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--greenDisabled);
+}
+
+.addresses {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.copy {
+  margin-left: auto;
+}
+
+
+@media (max-width: 768px) {
+  .menu {
+    left: auto;
+    right: 0;
+  }
+
+  .wrapper {
+    margin-left: auto;
+  }
+}

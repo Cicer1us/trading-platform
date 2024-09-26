@@ -1,0 +1,24 @@
+.container {
+   display: flex;
+   column-gap: 16px;
+   align-items: center;
+   height: 100%;
+   justify-content: flex-end;
+}
+
+.container>* {
+   width: 50%;
+}
+
+@media (max-width: 768px) {
+   .container {
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 16px;
+   }
+
+   .container>* {
+      width: 100%;
+   }
+}

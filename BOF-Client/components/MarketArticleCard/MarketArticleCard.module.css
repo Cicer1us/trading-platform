@@ -1,0 +1,40 @@
+.card {
+   padding: 24px 32px;
+   border-bottom: 1px solid var(--borderColor);
+   display: flex;
+   column-gap: 12px;
+}
+
+.img {
+   width: 211px;
+   height: 120px;
+   border-radius: 24px;
+   overflow: hidden;
+   min-width: 210px;
+   position: relative;
+}
+
+
+.body {
+   display: flex;
+   row-gap: 10px;
+   flex-flow: column;
+}
+
+
+.date {
+   font-size: 16px;
+   font-weight: bold;
+   color: var(--secondaryFont);
+}
+
+.title {
+   color: var(--font);
+   font-weight: bold;
+   font-size: 16px;
+   line-height: 24px;
+}
+
+.title:hover {
+   text-decoration: underline;
+}

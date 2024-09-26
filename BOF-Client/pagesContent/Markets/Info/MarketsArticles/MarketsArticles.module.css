@@ -1,0 +1,21 @@
+.articles {
+   max-height: 520px;
+}
+
+.card {
+   padding-left: 0;
+   padding-right: 0;
+   padding-bottom: 12px;
+   height: 560px;
+   max-height: 560px;
+}
+
+.link {
+   display: flex;
+   justify-content: flex-end;
+   padding: 0 32px;
+   color: var(--green);
+   font-size: 14px;
+   text-decoration: underline;
+   font-weight: bold;
+}

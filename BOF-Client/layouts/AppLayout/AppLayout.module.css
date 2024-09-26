@@ -1,0 +1,39 @@
+.wrapper {
+  --greenSpot: url(/images/background/platform/Eclipse.png);
+  --redSpot: url(/images/background/platform/Rectangle.png);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: -webkit-max-content 1fr;
+  grid-template-rows: max-content 1fr;
+  min-height: 100vh;
+  background-color: var(--background);
+  background-image: var(--redSpot), var(--greenSpot);
+  background-size: 515px 580px, 1072px 850px;
+  background-position: 50% 90%, 50% 90%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  max-width: var(--maxContentWidth);
+  margin: auto;
+}
+
+.content {
+  max-width: calc(var(--width) + var(--padding) * 2);
+  width: 100%;
+  margin: 0 auto;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+}
+
+
+@media (max-width: 1440px) {
+  .wrapper {
+    background-size: 290px 411px, 603px 603px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    background-size: 127px 411px, 278px 603px;
+  }
+}

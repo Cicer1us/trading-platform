@@ -1,0 +1,100 @@
+.wrapperModal {
+  font-size: 16px;
+}
+
+.titleModal {
+  font-size: 24px;
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.descriptionModal {
+  margin: 0 0 14px;
+  font-size: 18px;
+}
+
+.subTitleModal {
+  font-size: 16px;
+  color: var(--secondaryFont);
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+
+.sectionTitleModal {
+  font-size: 18px;
+  margin: 0 0 14px;
+}
+
+.sectionModal {
+  padding: 24px 32px;
+  background-color: var(--secondaryBackground);
+  border-radius: 16px;
+  margin-bottom: 48px;
+}
+
+.lastSection {
+  margin-bottom: 48px;
+}
+
+.listModal {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItemModal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listItemModal:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.itemNameModal {
+  display: flex;
+  align-items: center;
+}
+
+.nameModal {
+  margin-right: 10px;
+}
+
+.itemValueModal {
+  font-weight: 700;
+  text-align: right;
+}
+
+.sectionModal p {
+  padding: 0;
+  margin: 0;
+}
+
+.actionsModal {
+  height: 48px;
+  width: 100%;
+  max-width: 137px;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.errorModal {
+  color: var(--red);
+}
+
+.riskTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.actions {
+  display: flex;
+  column-gap: 10px;
+}

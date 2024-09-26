@@ -1,0 +1,43 @@
+.wrapper {
+  position: fixed;
+  height: 48px;
+  width: 200px;
+  background-color: var(--greenSocial);
+  border-radius: 100px;
+  right: 170px;
+  bottom: 14px;
+  z-index: 90;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: width ease-in 0.3s;
+}
+
+.icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.icon>a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon:hover path {
+  fill: #ffff;
+  color: #fff;
+}
+
+.wrapper.hide {
+  width: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 960px) {
+  .wrapper {
+    display: none;
+  }
+}

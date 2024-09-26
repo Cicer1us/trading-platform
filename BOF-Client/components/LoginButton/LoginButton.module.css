@@ -1,0 +1,67 @@
+.wrapper {
+  width: 100%;
+  height: inherit;
+}
+
+.button {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: var(--font);
+  background-color: var(--green);
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  height: inherit;
+}
+
+.button>svg {
+  margin-left: 10px;
+}
+
+.button.connect:hover,
+.button:hover, .logout:hover {
+  background-color: var(--greenHover);
+  font-size: 14px;
+}
+
+.button.tokenSale {
+  padding: 14px 26px;
+}
+
+.logout {
+  min-width: 40px;
+  height: inherit;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.lightBlack {
+  background-color: var(--blue);
+}
+
+.darkBlack {
+  background-color: var(--secondaryBackground);
+}
+
+.logout.tokenSale {
+  margin-left: 12px;
+  width: 52px;
+  height: 52px;
+}
+
+@media (min-width: 993px) {
+  .darkBlack {
+    background-color: var(--defaultButton);
+  }
+}

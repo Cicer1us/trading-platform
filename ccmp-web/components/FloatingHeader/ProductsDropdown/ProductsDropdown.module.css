@@ -1,0 +1,12 @@
+.title.dropdown.products>div {
+   font-size: 14px;
+   background: transparent;
+   font-weight: 400;
+   color: var(--secondaryFont);
+   padding-right: 0;
+}
+
+.title.dropdown.products:hover>div {
+   color: var(--white);
+   font-weight: 400;
+}

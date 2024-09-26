@@ -1,0 +1,20 @@
+.leverageChart>div {
+   height: 100%;
+}
+
+.leverageChart {
+   padding: 32px;
+   flex: 1;
+}
+
+@media (max-width: 767px) {
+   .leverageChart {
+      padding: 12px;
+   }
+}
+
+@media (max-width: 992px) {
+   .leverageChart {
+      min-height: 410px;
+   }
+}

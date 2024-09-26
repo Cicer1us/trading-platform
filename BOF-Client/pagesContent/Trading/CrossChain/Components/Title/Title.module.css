@@ -1,0 +1,20 @@
+.wrapper{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    color:white;
+    margin-bottom: 27px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.coinsContainer{
+    display: flex;
+    min-width: 40px;
+    position:relative;
+}
+.overlapping{
+    position: absolute;
+    left: 18px;
+}

@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cell {
+  display: flex;
+}
+.cell:last-of-type {
+  position: relative;
+  left: -12%;
+}

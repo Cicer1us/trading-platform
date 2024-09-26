@@ -1,0 +1,56 @@
+name: build-tss-server-prod
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env: 
+  AVAILABLE_CHAINS: ${{ secrets.AVAILABLE_CHAINS }}
+  RPC_URL_1: ${{ secrets.RPC_URL_1 }}
+  RPC_URL_5: ${{ secrets.RPC_URL_5 }}
+  RPC_URL_10: ${{ secrets.RPC_URL_10 }}
+  RPC_URL_56: ${{ secrets.RPC_URL_56 }}
+  RPC_URL_137: ${{ secrets.RPC_URL_137 }}
+  RPC_URL_250: ${{ secrets.RPC_URL_250 }}
+  RPC_URL_43114: ${{ secrets.RPC_URL_43114 }}
+  RPC_URL_42161: ${{ secrets.RPC_URL_42161 }}
+  GG20_AVAILABLE_PORTS: ${{ secrets.GG20_AVAILABLE_PORTS }}
+  KEY_SHARE_MANAGER_ADDRESS: ${{ secrets.KEY_SHARE_MANAGER_ADDRESS }}
+  KEY_SHARE_MANAGER_CHAIN_ID: ${{ secrets.KEY_SHARE_MANAGER_CHAIN_ID }}
+  ADMIN_GNOSIS_SAFE_ADDRESS: ${{ secrets.ADMIN_GNOSIS_SAFE_ADDRESS }}
+  ADMIN_GNOSIS_SAFE_CHAIN_ID: ${{ secrets.ADMIN_GNOSIS_SAFE_CHAIN_ID }}
+  NODE_ENV: ${{ secrets.NODE_ENV }}
+  PORT: ${{ secrets.PORT }}
+  SIGNER_NAME: ${{ secrets.SIGNER_NAME }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    # type of runner
+    runs-on: validator-server-prod
+
+    # sequence of tasks
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v2.5.0
+        with:
+          node-version: '16.x'
+
+      - name: install and build
+        run: |
+          npm cache clean --force
+          cp -R ../../../multi-party-ecdsa/target/release/examples/ ./target/
+          npm ci
+          npm run build
+          pm2 start 

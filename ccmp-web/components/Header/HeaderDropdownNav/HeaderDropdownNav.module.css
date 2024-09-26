@@ -1,0 +1,82 @@
+.wrapper {
+  position: relative;
+}
+
+.menuDropdown {
+  position: absolute;
+  padding: 24px;
+  border: 1px solid #38d9c0;
+  background: #2B363B;
+  border-radius: 8px;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0;
+  min-width: 100%;
+  transition: 0.3s ease-in-out;
+  max-height: 500px;
+  width: 209px;
+  overflow: auto;
+  top: 30px;
+  right: 15px;
+}
+
+.menuDropdown.openMenu {
+  pointer-events: all;
+  opacity: 1;
+}
+
+
+.menuLink {
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s, background-color 0.3s;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.menuDropdown .menuLink {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  padding-bottom: 16px;
+}
+
+.menuDropdown:hover {
+  color: #2f2e3d;
+}
+
+.burgerMenu {
+  background-color: #2B363B;
+  border-radius: 8px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  width: 24px;
+  height: 24px;
+  padding-right: 1px;
+}
+
+.linkButton {
+  margin: 16px 0;
+}
+
+.smwrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.sm {
+  height: 24px;
+  width: 24px;
+}

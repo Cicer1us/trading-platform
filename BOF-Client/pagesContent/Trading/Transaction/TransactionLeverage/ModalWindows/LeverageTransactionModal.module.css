@@ -1,0 +1,119 @@
+.wrapperModal {
+  font-size: 16px;
+}
+.titleModal {
+  font-size: 24px;
+  margin: 0 0 14px;
+}
+.titleBottomMargin {
+  margin-bottom: 40px;
+}
+.descriptionModal {
+  color: var(--secondaryFont);
+}
+.sectionTitleModal {
+  font-size: 18px;
+  margin: 0 0 14px;
+}
+.sectionModal {
+  padding: 24px 32px;
+  background: var(--secondaryBackground);
+  box-sizing: border-box;
+  backdrop-filter: blur(42px);
+  border-radius: 16px;
+  margin-bottom: 48px;
+}
+
+.listModal {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.listItemModal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.listItemModal:not(:last-child) {
+  margin-bottom: 14px;
+}
+.itemNameModal {
+  display: flex;
+  align-items: center;
+}
+.nameModal {
+  margin-right: 10px;
+  color: var(--secondaryFont);
+}
+.itemValueModal {
+  font-weight: 700;
+  text-align: right;
+}
+.sectionModal p {
+  padding: 0;
+  margin: 0;
+}
+
+.errorModal {
+  color: var(--red);
+}
+
+.buttonWrapper {
+  margin-top: 48px;
+}
+
+.inputWrapper {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.inputBlockDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.checkBoxListWrapper {
+  display: flex;
+  column-gap: 30px;
+  margin-bottom: 24px;
+}
+
+.buttonWrapper {
+  margin-top: 48px;
+}
+
+.inputWrapper {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.inputBlockDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.checkBoxListWrapper {
+  display: flex;
+  column-gap: 30px;
+  margin-bottom: 24px;
+}
+
+.buttonWrapper {
+  margin-top: 48px;
+}
+
+.inputWrapper {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.inputBlockDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.checkBoxListWrapper {
+  display: flex;
+  column-gap: 30px;
+  margin-bottom: 24px;
+}

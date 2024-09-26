@@ -1,0 +1,106 @@
+.wrapper {
+    padding: 0;
+    background-image: url(/images/newImages/landing/gradient.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-clip: border-box;
+  }
+  
+  .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 40px 80px 74px;
+  }
+  
+  .title {
+      margin-bottom: 0;
+      font-weight: 700;
+      font-size: 100px;
+      line-height: 120px;
+      color: #FFFFFF;
+      z-index: 2;
+  }
+  
+  .subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #C5C9C9;
+      z-index: 2;
+  }
+  
+  .btn {
+      margin-top: 20px;
+      width: 219px;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+      .content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 32px 80px;
+      }
+  
+      .title {
+          font-weight: 700;
+          font-size: 64px;
+          line-height: 80px;
+      }
+  
+      .subtitle {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 21px;
+          color: #C5C9C9;
+      }
+  
+      .btn {}
+  }
+  
+  @media (max-width: 480px) {
+  
+      .wrapper {
+        padding: 0;
+        background-repeat: no-repeat;
+        background-position: left;
+      }
+  
+      .content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 64px 24px;
+      }
+  
+      .title {
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 43px;
+      }
+  
+      .subtitle {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 21px;
+          color: #C5C9C9;
+      }
+  }
+  
+  @media (max-width: 1440px) {
+    .wrapper:before {
+      background-size: 290px 411px, 603px 603px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .wrapper:before {
+      background-size: 227px 411px, 478px 703px;
+      background-attachment: initial;
+    }
+  }
+  
+  

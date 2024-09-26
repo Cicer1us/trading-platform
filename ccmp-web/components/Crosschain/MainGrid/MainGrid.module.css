@@ -1,0 +1,248 @@
+.wrap {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 24px;
+}
+
+.subtitleSection {
+    grid-column: 1/3;
+}
+
+.btn {
+    width: 30%;
+    height: 56px;
+    margin-top: 48px;
+    margin-bottom: 80px;
+}
+
+.howWeUseIt {
+    height: 475px;
+    background-image: url(public/images/crosschain/howWeUseIt.png), url(public/images/crosschain/howWeUseIt.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position-x: right, right;
+    background-position-y: bottom, bottom;
+    background-clip: border-box, border-box;
+    background-size: 80%, cover;
+}
+
+.howYouUseIt {
+    grid-column: 3/4;
+    grid-row: 1/3;
+    background-image: url(public/images/crosschain/howyoucan.png), url(public/images/crosschain/howyoucanuseit.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position-x: center, right;
+    background-position-y: 14em, bottom;
+    background-clip: border-box;
+    background-size: 70%, cover;
+}
+
+.howItWorks {
+    height: 475px;
+    background-image: url(public/images/crosschain/howItWorks.png), url(public/images/crosschain/howItWorks.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position-x: center, right;
+    background-position-y: 13em, bottom;
+    background-clip: border-box, border-box;
+    background-size: 70%, cover;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;  
+}
+
+.content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;  
+    display: flex;
+    align-items: center;
+    
+    color: #C5C9C9; 
+}
+
+@media (max-width: 1280px) {
+    .howWeUseIt {
+        background-position-x: right, right;
+        background-size: 90%, cover;
+    }
+    
+    .howYouUseIt {
+        background-position-x: center, right;
+        background-position-y: 17em, bottom;
+        background-size: 70%, cover;
+    }
+    
+    .howItWorks {
+        background-position-x: center, right;
+        background-position-y: 14em, bottom;
+        background-size: 90%, cover;
+    }
+}
+
+@media (max-width: 1024px) {
+    .howWeUseIt {
+        background-position-x: right, right;
+
+        background-size: 80%, cover;
+    }
+    
+    .howYouUseIt {
+        background-position-x: center, right;
+        background-position-y: 21em, bottom;
+        background-size: 80%, cover;
+    }
+    
+    .howItWorks {
+        background-position-x: center, right;
+        background-position-y: 18em, bottom;
+        background-size: 90%, cover;
+    }
+}
+
+@media (max-width: 834px) {
+
+    .wrap {
+        gap:24px;
+    }
+
+    .subtitleSection {
+        grid-column: 1/4 ;
+        grid-row: 1/2;
+    }
+    .howYouUseIt {
+        height: 470px;
+        grid-column: 1/4;
+        grid-row: 4/5;
+        background-size: 30%, cover;
+        background-position-y: 15em, bottom;
+    }
+
+    .howWeUseIt {
+        height: 470px;
+        grid-column: 1/4;
+        grid-row: 3/4;
+        background-position-x: right, right;
+
+        background-size: 70%, cover;
+    }
+
+    .howItWorks {
+        height: 470px;
+        grid-column: 1/4;
+        grid-row: 2/3;
+        background-size: 50%, cover;
+        background-position-y: 12em, bottom;
+    }
+
+    .btn {
+        margin-top: 48px;
+        margin-bottom: 64px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .subtitleSection {
+        grid-column: 1/4 ;
+        grid-row: 1/2;
+    }
+    .howYouUseIt {
+        height: 470px;
+        grid-column: 1/4;
+        grid-row: 4/5;
+        background-size: 40%, cover;
+        background-position-y: 17em, bottom;
+    }
+
+    .howWeUseIt {
+        height: 470px;
+        grid-column: 1/4;
+        grid-row: 3/4;
+        background-position-x: right, right;
+
+        background-size: 80%, cover;
+    }
+
+    .howItWorks {
+        height: 470px;
+        grid-column: 1/4;
+        grid-row: 2/3;
+        background-size: 60%, cover;
+        background-position-y: 14em, bottom;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        width: 100%;
+    }
+
+
+    .howItWorks {
+        height: 470px;
+        grid-column: 1/4;
+        grid-row: 2/3;
+        background-size: 70%, cover;
+        background-position-y: 14em, bottom;
+    }
+
+    .howWeUseIt {
+        height: 470px;
+        grid-column: 1/4;
+        grid-row: 3/4;
+        background-position-x: right, right;
+
+        background-size: 80%, cover;
+    }
+
+    .howYouUseIt {
+        height: 470px;
+        grid-column: 1/4;
+        grid-row: 4/5;
+        background-size: 45%, cover;
+        background-position-y: 16em, bottom;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .howWeUseIt {
+        height: 320px;
+        grid-column: 1/4;
+        grid-row: 3/4;
+        background-image: url(public/images/crosschain/howWeUseIt.svg);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
+        background-clip: border-box;
+        background-size: cover;
+    }
+    
+    .howYouUseIt {
+        height: 380px;
+        grid-column: 1/4;
+        grid-row: 4/5;
+        background-image: url(public/images/crosschain/howyoucanuseit.svg);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
+        background-clip: border-box;
+        background-size: cover;
+    }
+    
+    .howItWorks {
+        height: 320px;
+        grid-column: 1/4;
+        grid-row: 2/3;
+        background-image: url(public/images/crosschain/howItWorks.svg);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
+        background-clip: border-box;
+        background-size: cover;
+    }
+}

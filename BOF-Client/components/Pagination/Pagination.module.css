@@ -1,0 +1,28 @@
+.pageItem {
+    margin: 3px;
+    list-style-type: none;
+    color: var(--secondaryFont);
+    font-size: 16px;
+    font-weight: 700;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+}
+
+.activeItem {
+    border-radius: 8px;
+    background-color: var(--defaultButton);
+}
+
+
+@media (max-width: 768px) {
+    .pageItem {
+        margin: 0;
+    }
+}

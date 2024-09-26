@@ -1,0 +1,147 @@
+.menuLink {
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 100%;
+}
+
+.menuLink:hover {
+  font-weight: 700;
+}
+
+.menuLink:last-child {
+  margin-bottom: 16px;
+}
+
+.link {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  transition: 0.3s;
+}
+
+.link:not(.disabled):hover {
+  color: #909195;
+}
+
+.linkButton {
+  display: block;
+  width: 146px;
+  margin-left: 50px;
+}
+
+/* mobile */
+.mobile {
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.mobileMenu {
+  padding: 3% 5% 0 5%;
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  grid-template-rows: max-content 1fr max-content;
+  align-items: center;
+  flex: 1;
+}
+
+.closeBtn {
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.anchorWrapper {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.anchorWrapper:last-of-type {
+  margin-bottom: 16px;
+}
+
+.navigationMobile {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.mobile .wrapperLanguageSwitcher {
+  max-width: 74px;
+  margin: 0;
+}
+
+.mobile .linkButton {
+  margin: 0;
+  width: 100%;
+}
+
+.languageOptionsWrapper {
+  cursor: pointer;
+  display: flex;
+}
+
+.languageOption {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--font);
+}
+
+.languageOption:first-of-type {
+  margin-right: 14px;
+}
+
+.languageOption.active {
+  color: var(--green);
+}
+.cta {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.socialsWrapper {
+  height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: width ease-in 0.3s;
+}
+
+.socialButtonsWrapper {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+@media (max-width: 1200px) {
+  .mobile {
+    display: flex;
+  }
+
+  .link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

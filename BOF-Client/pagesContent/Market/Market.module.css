@@ -1,0 +1,56 @@
+.price {
+   grid-area: price;
+}
+
+.chart {
+   grid-area: chart;
+}
+
+.description {
+   grid-area: description;
+}
+
+.links {
+   grid-area: links;
+}
+
+.rank {
+   grid-area: rank;
+}
+
+.news {
+   grid-area: news;
+}
+
+.container {
+   display: grid;
+   grid-template-columns: 1fr 424px;
+   grid-template-rows: 120px 120px 1fr 1fr;
+   grid-template-areas: 'price links'
+      'chart rank'
+      'chart news'
+      'description news';
+   grid-gap: 20px;
+   height: 100%;
+}
+
+@media (max-width: 768px) {
+   .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 120px 1fr 104px 530px;
+      grid-template-areas: 'price'
+         'links'
+         'rank'
+         'chart'
+         'description'
+         'news';
+      grid-gap: 24px;
+      height: 100%;
+      margin-bottom: 20px;
+   }
+
+   .news {
+      margin-bottom: 20px;
+   }
+}

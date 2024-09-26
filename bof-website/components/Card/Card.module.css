@@ -1,0 +1,6 @@
+.card {
+  border-radius: 16px;
+  padding: 32px;
+  background-color: var(--secondaryBackground);
+  flex: 1;
+}

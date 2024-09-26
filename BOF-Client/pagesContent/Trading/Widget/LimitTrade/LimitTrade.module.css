@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  grid-gap: 16px;
+}
+
+.grid:first-of-type {
+  margin-bottom: 24px;
+}
+
+.grid:last-of-type {
+  margin-bottom: 30px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  color: var(--secondaryFont);
+  margin-bottom: 8px;
+}
+
+.text {
+  margin-right: 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.label.positionLeft {
+  justify-content: flex-end;
+}
+
+.balance {
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.wrapperButtonSwitch {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 26px;
+}

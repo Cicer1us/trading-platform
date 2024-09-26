@@ -1,0 +1,23 @@
+.wrapper {
+  width: 17px;
+  height: 17px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper+.tooltipContainer {
+  --tooltipBackground: var(--secondaryBackground);
+  --tooltipBorder: var(--green);
+  color: var(--font);
+  background-color: var(--secondaryBackground);
+  font-size: 14px;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 315px;
+  white-space: normal;
+}

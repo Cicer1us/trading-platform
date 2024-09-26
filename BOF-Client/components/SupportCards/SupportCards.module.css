@@ -1,0 +1,313 @@
+/* support */
+.wrapper {
+  font-family: Inter;
+  font-size: 16px;
+  color: var(--font);
+}
+
+.showDesktop {
+  display: block;
+}
+
+.showMobile {
+  display: none;
+}
+
+.sectionContent {
+  margin: 0 0 30px;
+}
+
+.sectionContentSupport {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+  grid-template-rows: max-content;
+  grid-template-areas: 'chat email phone';
+}
+
+.contactCardWrapper {
+  display: block;
+  transition: transform 0.3s;
+  z-index: 1;
+}
+
+.contactCardWrapper:hover {
+  transform: scale(0.95);
+}
+
+.areaNameChat {
+  grid-area: chat;
+}
+
+.areaNamePhone {
+  grid-area: phone;
+}
+
+.areaNameEmail {
+  grid-area: email;
+}
+
+.contactCard {
+  background-color: var(--secondaryBackground);
+  border-radius: 16px;
+  padding: 32px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content max-content 1fr max-content;
+  text-align: left;
+  cursor: pointer;
+}
+
+.contactCardImageWrapper {
+  margin-bottom: 32px;
+  width: 72px;
+  height: 72px;
+}
+
+.contactCardImage {
+  width: 100%;
+}
+
+.contactCardTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  margin: 0 0 8px;
+}
+
+.contactCardDescription {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--secondaryFont);
+  margin: 0 0 60px;
+}
+
+.contactCardLink {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--font);
+}
+
+.communityAmbassadorWrapper {
+  display: flex;
+  gap: 29px;
+  justify-content: space-between;
+}
+
+.communityAmbassadorWrapper h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.communityAmbassadorWrapper p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--secondaryFont);
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.communityImageWrapper {
+  margin-bottom: 32px;
+  width: 72px;
+  height: 72px;
+}
+
+.communityWrapper {
+  position: relative;
+  background-color: var(--secondaryBackground);
+  border-radius: 16px;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  -moz-box-align: center;
+  align-items: center;
+  padding: 32px;
+  min-height: 340px;
+  z-index: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.communityWrapper::before {
+  content: "";
+  background-image: var(--bgCommunityCard);
+  background-repeat: no-repeat;
+  background-position: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.08;
+  z-index: -1;
+}
+
+.communityHeader {
+  max-width: 533px;
+  margin: 0;
+  margin-top: auto;
+}
+
+.communitySocialLinks {
+  display: flex;
+}
+
+.communitySocialLink {
+  max-width: 64px;
+  width: 100%;
+}
+
+.communitySocialLink:not(:first-child) {
+  margin-left: 16px;
+}
+
+.communitySocialLinkImage {
+  width: 100%;
+  /*transition: opacity 0.3s, filter 0.3s;*/
+}
+
+.communitySocialLinkImage:hover {
+  filter: invert(99%) sepia(500%) hue-rotate(180deg) brightness(100%) contrast(100%);
+  opacity: 0.8;
+}
+
+.ambassadorImageWrapper {
+  margin-bottom: 32px;
+  width: 72px;
+  height: 72px;
+}
+
+.ambassadorWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondaryBackground);
+  border-radius: 16px;
+  padding: 32px;
+  flex-basis: 600px;
+  position: relative;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+.ambassadorWrapper span {
+  color: var(--green);
+}
+
+.ambassadorWrapper p {
+  max-width: 500px;
+}
+
+.ambassadorWrapperLink {
+  margin-top: auto;
+}
+
+.ambassadorWrapper button {
+  background-color: #5bd8bf !important;
+  max-width: 300px;
+}
+
+.ambassadorWrapper>button:hover {
+  background-color: #5bd8bfaa !important;
+}
+
+@media screen and (max-width: 767px) {
+  .showDesktop {
+    display: none;
+  }
+
+  .showMobile {
+    display: block;
+  }
+
+  .sectionContentSupport {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+    grid-gap: 24px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .communityWrapper {
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+    padding: 24px;
+  }
+
+  .sectionContentTeam {
+    grid-template-columns: 1fr;
+  }
+
+  .ambassadorWrapper {
+    flex-basis: auto;
+    display: flex;
+    padding: 24px;
+  }
+
+  .communityAmbassadorWrapper h2 {
+    line-height: 34px;
+    margin-bottom: 12px;
+  }
+
+  .ambassadorWrapper>img {
+    display: none;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .communityDescription {
+    margin: 0;
+  }
+
+  .communityAmbassadorWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .communityWrapper {
+    background-size: cover;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .communityWrapper {
+    padding: 24px;
+    grid-gap: 40px;
+    min-height: 250px;
+  }
+
+  .communityTitle {
+    font-size: 24px;
+    line-height: 34px;
+    margin: 0 0 8px;
+  }
+
+  .communityDescription {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .communitySocialLink {
+    max-width: 48px;
+  }
+
+  .communitySocialLinks {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .communitySocialLink:not(:first-child) {
+    margin-left: 12px;
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "client-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 3002",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore ."
+  },
+  "lint-staged": {
+    "*.(ts|js)": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "contentful": "^10.3.4",
+    "dayjs": "^1.11.9",
+    "google-auth-library": "^8.9.0",
+    "google-spreadsheet": "^4.0.2",
+    "html-react-parser": "^4.0.0",
+    "markdown-to-jsx": "^7.2.1",
+    "memory-cache": "^0.2.0",
+    "next": "^13.4.9",
+    "next-images": "^1.8.5",
+    "nextjs-progressbar": "0.0.16",
+    "node-cmd": "^5.0.0",
+    "react": "18.2.0",
+    "react-accessible-accordion": "^5.0.0",
+    "react-dom": "18.2.0",
+    "react-gtm-module": "^2.0.11",
+    "react-number-format": "^5.2.2",
+    "react-scroll": "^1.8.9",
+    "react-slick": "^0.29.0",
+    "react-spinners": "^0.13.8",
+    "react-use-draggable-scroll": "^0.4.7",
+    "react-zendesk": "^0.1.13",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.14",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0",
+    "typescript": "5.1.6"
+  }
+}

@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text{
+    background-color: #151a1d;
+    color: #3e3d4c;
+    padding: 18px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+
+}
+.text > svg{
+    margin-left: 8px;
+
+}
+.text > svg > path{
+    stroke: #3e3d4c;
+}
+
+.text.activeText > svg > path{
+    stroke: #FFFFFF;
+
+}
+.separator{
+    height: 0px;
+    width: 220px;
+    margin: 0px 20px;
+    border-top: dotted 8px #151a1d;
+}
+.activeText{
+    background-color: #FF6666;
+    color: #FFFFFF;
+    
+}
+.activeSeparator{
+    border-top: solid 3px #FF6666;
+    background-color: red;
+}

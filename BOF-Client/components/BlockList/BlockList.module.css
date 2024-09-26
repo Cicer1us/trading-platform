@@ -1,0 +1,99 @@
+.item {
+   display: flex;
+   justify-content: space-around;
+   flex-flow: column;
+   flex: 1;
+   row-gap: 8px;
+}
+
+.list {
+   padding: 24px;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+   column-gap: 24px;
+   row-gap: 32px;
+   min-height: 110px;
+}
+
+.title {
+   font-size: 16px;
+   font-weight: 400;
+   color: #C5C5C9;
+}
+
+.button>.title {
+   height: 100%;
+   font-weight: bold;
+   color: white;
+   background-color: var(--defaultButton);
+   border-radius: 8px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 14px;
+}
+
+.button>.title:hover {
+   background-color: var(--greenHover);
+}
+
+.content {
+   font-weight: 700;
+   font-size: 16px;
+}
+
+.red>.content {
+   color: var(--red);
+   width: max-content;
+}
+
+.green>.content {
+   color: var(--green);
+}
+
+.button {
+   cursor: pointer;
+   height: 40px;
+}
+
+.blockTitle {
+   position: relative;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+}
+
+.blockIcon {
+   position: absolute;
+   top: 0;
+}
+
+.blockIcon:nth-child(2) {
+   left: 13px;
+}
+
+.blockIcon:nth-child(3) {
+   left: 26px;
+}
+
+.blockTitle>.title {
+   margin-left: 40px;
+   color: var(--font);
+   font-weight: 700;
+}
+
+.dropDown {
+   margin-left: 8px;
+}
+
+@media (min-width: 1140px) {
+   .list {
+      display: flex;
+      align-items: center;
+      padding: 32px 40px;
+   }
+
+   .button {
+      max-width: 100px;
+   }
+}

@@ -1,0 +1,85 @@
+.wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+}
+
+.header {
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 87px; 
+}
+
+.gridThreshold {
+    display: grid;
+    grid-template-columns: 0.6fr auto;
+    background-image: url(public/images/crosschain/security/ThresholdSignature.png), url(public/images/crosschain/howWeUseIt.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position-x: right, center;
+    background-position-y: center, center;
+    background-clip: border-box, border-box;
+    background-size: 35%, cover;
+}
+
+.gridTSS {
+    display: grid;
+    grid-template-columns: 0.6fr auto;
+    background-image: url(public/images/crosschain/security/TSS.svg), url(public/images/crosschain/howItWorks.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position-x: right, left;
+    background-position-y: center, bottom;
+    background-clip: border-box, border-box;
+    background-size: 35%, cover;
+}
+
+.contentWrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px; 
+    margin-bottom: 0; 
+}
+
+.content {
+    font-size: 16px;
+    line-height: 24px;
+    color: #C5C9C9;  
+}
+
+@media (max-width: 834px) {
+
+    .wrap {
+        flex-direction: column;
+    }
+    .gridThreshold {
+        display: flex;
+        background-image: url(public/images/crosschain/howWeUseIt.svg);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-clip: border-box;
+        background-size: cover;
+    }
+    
+    .gridTSS {
+        display: flex;
+        background-image: url(public/images/crosschain/howItWorks.svg);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: bottom;
+        background-clip: border-box;
+        background-size: cover;
+    }  
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,73 @@
+.wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.header {
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 87px;
+  margin: 0;
+  padding: 0;
+}
+
+.styledCard {
+  padding: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background-image: url(/images/cross-chain-landing/back.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.tag {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--green);
+}
+
+.content {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--arrowColor);
+  margin: 0;
+}
+
+.btn {
+  max-width: 219px;
+  height: 56px;
+}
+
+.imgWrapper {
+  position: relative;
+  min-height: 224px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 834px) {
+  .styledCard {
+    display: flex;
+  }
+
+  .imgWrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 32px;
+  }
+}

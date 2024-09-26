@@ -1,0 +1,189 @@
+.buttonSimple {
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 10px 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  background-color: var(--secondaryBackground);
+  color: var(--font);
+}
+
+.buttonSimple>.loader {
+  margin-left: 10px;
+}
+
+.buttonSimple.dark {
+  color: var(--font);
+  background-color: var(--secondaryBackground);
+}
+
+.buttonSimple.default {
+  color: var(--font);
+  background-color: var(--defaultButton);
+}
+
+.buttonSimple.default:hover {
+  background-color: var(--greenHover);
+}
+
+.buttonSimple.darkBlue {
+  color: var(--secondaryFont);
+  background-color: #181D27;
+}
+
+.buttonSimple.darkBlue:hover {
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+
+.buttonSimple.green:not(.border) {
+  background-color: #38d9c0;
+}
+
+.buttonSimple.green.border {
+  border: 2px solid var(--green);
+}
+
+.buttonSimple.green svg {
+  fill: var(--font);
+}
+
+.buttonSimple.red:not(.border) {
+  background-color: var(--red);
+}
+
+.buttonSimple.red.border {
+  border: 2px solid var(--red);
+}
+
+.buttonSimple.red svg {
+  fill: var(--font);
+}
+
+.buttonSimple.red {
+  background-color: var(--red);
+}
+
+.buttonSimple.red:hover {
+  background-color: var(--redHover);
+}
+
+.buttonSimple.green:disabled {
+  background-color: var(--greenDisabled);
+  color: var(--secondaryFontDisabled);
+  cursor: not-allowed;
+}
+
+.buttonSimple.green:hover {
+  background-color: var(--greenDisabled);
+}
+
+.buttonSimple.transparent {
+  color: var(--font);
+  background-color: transparent;
+  border: 2px solid var(--font);
+}
+
+.buttonSimple.transparent svg {
+  fill: var(--font);
+}
+
+.buttonSimple.transparent:disabled {
+  background-color: var(--greenDisabled);
+  color: var(--secondaryFontDisabled);
+  cursor: not-allowed;
+}
+
+.buttonSimple.transparent:hover {
+  backdrop-filter: blur(42px);
+  background-color: var(--green);
+}
+
+.buttonSimple.white {
+  color: var(--green);
+  background-color: var(--font);
+}
+
+.buttonSimple.white svg {
+  fill: var(--green);
+}
+
+.buttonSimple.white:disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  color: var(--greenDisabled);
+  background-color: var(--secondaryFontDisabled);
+}
+
+.buttonSimple.big {
+  min-height: 64px;
+}
+
+.buttonSimple.middle {
+  min-height: 56px;
+}
+
+.buttonSimple.small {
+  min-height: 40px;
+}
+
+.buttonSimple.login {
+  min-height: 48px;
+  font-size: 14px;
+}
+
+.buttonSimple.login {
+  min-height: 48px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.buttonSimple.dark:hover {
+  background-color: var(--green);
+}
+
+.buttonDark.green {
+  background-color: var(--darkGreen);
+}
+
+.buttonDark.green:hover {
+  background-color: var(--green);
+}
+
+.buttonDark.green:disabled {
+  background-color: var(--greenDisabled);
+  color: var(--font);
+}
+
+.buttonSimple.red:disabled {
+  background-color: var(--borderColor);
+  color: var(--font);
+  cursor: not-allowed;
+}
+
+.linkWrapper {
+  width: 100%;
+}
+
+.loader {
+  margin-left: 10px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,78 @@
+name: nodejs-tests
+
+on: [push, pull_request]
+
+env:
+  ETH_NODE_URI_MAINNET: ${{ secrets.ETH_NODE_URI_MAINNET }}
+  PK_MAINNET: ${{ secrets.PK_MAINNET }}
+  ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
+
+  ETH_NODE_URI_GOERLI: ${{ secrets.ETH_NODE_URI_GOERLI }}
+  PK_GOERLI: ${{ secrets.PK_GOERLI }}
+
+  ETH_NODE_URI_OPTIMISM: ${{ secrets.ETH_NODE_URI_OPTIMISM }}
+  PK_OPTIMISM: ${{ secrets.PK_OPTIMISM }}
+  OPTIMISMSCAN_API_KEY: ${{ secrets.OPTIMISMSCAN_API_KEY }}
+
+  ETH_NODE_URI_BSC: ${{ secrets.ETH_NODE_URI_BSC }}
+  PK_BSC: ${{ secrets.PK_BSC }}
+  BSCSCAN_API_KEY: ${{ secrets.BSCSCAN_API_KEY }}
+
+  ETH_NODE_URI_POLYGON: ${{ secrets.ETH_NODE_URI_POLYGON }}
+  PK_POLYGON: ${{ secrets.PK_POLYGON }}
+  POLYGONSCAN_API_KEY: ${{ secrets.POLYGONSCAN_API_KEY }}
+
+  ETH_NODE_URI_ARBITRUM: ${{ secrets.ETH_NODE_URI_ARBITRUM }};
+  PK_ARBITRUM: ${{ secrets.PK_ARBITRUM }};
+  ARBITRUMSCAN_API_KEY: ${{ secrets.ARBITRUMSCAN_API_KEY }};
+
+  ETH_NODE_URI_AVALANCHE: ${{ secrets.ETH_NODE_URI_AVALANCHE }};
+  PK_AVALANCHE: ${{ secrets.PK_AVALANCHE }};
+  SNOWTRACE_API_KEY: ${{ secrets.SNOWTRACE_API_KEY }};
+
+  ETH_NODE_URI_FANTOM: ${{ secrets.ETH_NODE_URI_FANTOM }};
+  PK_FANTOM: ${{ secrets.PK_FANTOM }};
+  FTMSCAN_API_KEY: ${{ secrets.FTMSCAN_API_KEY }};
+
+  ETH_NODE_URI_TENDERLY: ${{ secrets.ETH_NODE_URI_TENDERLY }}
+  PK_TENDERLY: ${{ secrets.PK_TENDERLY }}
+
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.17.6
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Installing dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Linting
+        run: yarn lint
+
+      - name: Formatting
+        run: yarn format
+
+      - name: Running tests
+        run: yarn test

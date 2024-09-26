@@ -1,0 +1,105 @@
+.wrap {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  gap: 24px;
+}
+
+.subtitleSection {
+  grid-column: 1/3;
+}
+
+.decentralized {
+  grid-row: 2/4;
+}
+
+.fundsAvailable {
+  grid-column: 2/3;
+  grid-row: 2/4;
+}
+
+.plugins {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+
+.payWithAnyToken {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+
+.btn {
+  width: 30%;
+  height: 56px;
+  margin-top: 48px;
+  margin-bottom: 80px;
+}
+
+.decentralized {
+  background-image: url(/images/crypto-payment/decentralised-gradient.svg);
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 10%;
+  background-clip: border-box;
+  background-size: cover;
+}
+
+.fundsAvailable {
+  background-image: url(/images/crypto-payment/funds-available-gradient.svg);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 10%;
+
+  background-clip: border-box;
+  background-size: cover;
+}
+
+.plugins {
+  background-image: url(/images/crypto-payment/plugins-gradient.svg);
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 10%;
+
+  background-clip: border-box;
+  background-size: cover;
+}
+
+.payWithAnyToken {
+  background-image: url(/images/crypto-payment/pay-with-any-token-gradient.svg);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 10%;
+
+  background-clip: border-box;
+  background-size: cover;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0;
+}
+
+.content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+
+  color: var(--secondaryFont);
+}
+
+@media (max-width: 1050px) {
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .btn {
+    margin-top: 48px;
+    margin-bottom: 64px;
+  }
+}

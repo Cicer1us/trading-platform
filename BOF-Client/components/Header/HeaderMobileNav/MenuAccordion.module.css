@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+}
+
+.title {
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    width: 100%;
+}
+
+.category {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    color: #38D9C0;
+}
+
+.link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #C5C9C9;
+}
+
+.linksWrap {
+    border-bottom: 1px solid #494D50;
+    padding-bottom: 8px;
+}
+
+.divider {
+    padding: 6px;
+}
+
+.arrowIcon {
+    margin-left: 10px;
+  }

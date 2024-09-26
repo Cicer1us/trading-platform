@@ -1,0 +1,114 @@
+.footer {
+  color: var(--second);
+  text-align: center;
+}
+
+.footerContainer {
+  margin: 0 auto;
+  border-top: 1px solid var(--borderColor);
+}
+
+.footerUp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 28px 64px;
+  gap: 14px;
+  height: var(--footerHeight);
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 90px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 24px;
+}
+
+.links a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #C5C5C9;
+
+}
+
+.links a:hover {
+  color: #fff;
+}
+
+.icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.icon>a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+}
+
+.icon:hover rect {
+  fill: #38d9c0;
+  color: #fff;
+}
+
+.icon:hover path {
+  fill: #ffff;
+  color: #fff;
+}
+
+.footerUp>a:hover {
+  color: #ffff;
+}
+
+.footerButton:hover {
+  color: #ffff;
+}
+
+.footerTitle {
+  color: var(--secondaryFontDisabled);
+  font-size: 14px;
+}
+
+a.footerTitle:hover {
+  text-decoration: underline;
+}
+
+.footerTitle:not(:last-child) {
+  margin-right: 20px;
+}
+
+@media (max-width: 1040px) {
+  .footerUp {
+    padding: 26px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px
+  }
+
+  .links {
+    gap: 16px;
+  }
+
+  .links a {
+    font-size: 14px;
+
+  }
+
+  .socialLinks {
+    gap: 8px;
+  }
+
+  .footerContainer {
+    padding: 0 16px;
+  }
+}

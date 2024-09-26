@@ -1,0 +1,74 @@
+:root {
+  --font: #fff;
+
+  /* Any changes to this var should be applied to /public/static/css/style.css as well */
+  --defaultButton: #2B363B;
+  --secondaryButton: #255558;
+
+  --secondaryBackground: #1A1F23;
+  --background: #0B0E0F;
+
+  --secondaryFont: #C5C5C9;
+  --secondaryFontDisabled: #a7a6af;
+
+  --transparentWhite: rgba(255, 255, 255, 0.1);
+  --semiTransparentWhite: rgba(255, 255, 255, 0.6);
+
+  --red: #ff6666;
+  --redHover: #dd5656;
+  --darkRed: #4F303A;
+
+  --green: #38d9c0;
+  --greenSocial: #1D3D41;
+  --greenDisabled: #309089;
+  --greenHover: #255558;
+  --darkGreen: #304B4F;
+
+  --yellow: #DDBE6D;
+  --darkYellow: #4F3B30;
+  --white: #ffffff;
+  --darkGray: #151A1D;
+
+  --violet: #9D61FF;
+  --darkViolet: #45304F;
+
+
+  --darkBlue: #12151e;
+
+  --disabled: #242334;
+  --disabledFont: #a7a6af;
+
+  --fontFamily: 'Inter', sans-serif;
+
+  --borderColor: #3e3d4c;
+  --secondaryBorderColor: #494D50;
+  --arrowColor: #C5C9C9;
+  --padding: 164px;
+
+  --scrollWidth: 8px;
+
+  --maxContentWidth: 3100px;
+  --headerHeight: 80px;
+  --footerHeight: 80px;
+  --homepagePadding: 32px;
+}
+
+@media (max-width: 1440px) {
+  :root {
+    --padding: 64px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --padding: 40px;
+    --headerHeight: 56px;
+    --footerHeight: 132px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --padding: 16px;
+  }
+}

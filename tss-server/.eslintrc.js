@@ -1,0 +1,41 @@
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: 'tsconfig.json',
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint/eslint-plugin'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+  ],
+  root: true,
+  env: {
+    node: true,
+    jest: true,
+  },
+  ignorePatterns: ['.eslintrc.js'],
+  rules: {
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'error',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/ban-ts-comment" : "off",
+    '@typescript-eslint/no-unused-vars': ['error'],
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+    "class-methods-use-this": "off",
+    "no-param-reassign": "off",
+    "spaced-comment": "off",
+    "import/prefer-default-export": "off",
+    "no-multiple-empty-lines": "off",
+    "import/no-cycle": "off",
+    "import/extensions": "off",
+    "max-classes-per-file": "off",
+    "lines-between-class-members": "off",
+    "comma-dangle": "off",
+    "prefer-template": "warn",
+    "linebreak-style": 0,
+    "import/no-absolute-path": "off",
+    "import/no-unresolved": "off",
+  }
+};

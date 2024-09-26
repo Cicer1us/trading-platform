@@ -1,0 +1,37 @@
+.container {
+  padding: 40px;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 666px;
+  z-index: 2;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.wrapper>div:last-of-type {
+  margin-top: auto;
+}
+
+.wrapperButtonSwitch {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 26px;
+}
+
+.modal {
+  width: 860px;
+}
+
+.warnings {
+  margin-top: 24px;
+  display: flex;
+  flex-flow: column;
+  row-gap: 16px;
+}

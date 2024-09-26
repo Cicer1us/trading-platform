@@ -1,0 +1,19 @@
+query Payments($chainIds: [Int!]!, $orderId_in: [String!]! ) {
+	crossPayments(orderBy: timestamp, orderDirection: desc, chainIds: $chainIds, orderId_in: $orderId_in) {
+		id
+		initiator
+		merchant
+		orderId
+		payInAmount
+		payInToken
+		payOutAmount
+		payOutToken
+		blockHash
+		blockNumber
+		timestamp
+		txHash
+		txGasPrice
+		txGasUsed
+		chainId
+	}
+}

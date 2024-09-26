@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://allpay.bitoftrade.com/sitemap.xml
